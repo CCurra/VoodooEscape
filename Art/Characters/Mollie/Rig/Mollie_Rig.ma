@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: Mollie_Rig.ma
-//Last modified: Fri, Jan 26, 2018 12:08:13 PM
+//Last modified: Fri, Jan 26, 2018 12:17:21 PM
 //Codeset: 1252
 requires maya "2016";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "59175592-4317-1710-1407-77859A3F21D7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -88.766324457738804 71.259575022888072 188.00999474700328 ;
-	setAttr ".r" -type "double3" -6.9383527290772413 -1466.9999999999206 0 ;
+	setAttr ".t" -type "double3" 102.88807481106309 47.033066735042361 101.67780047068896 ;
+	setAttr ".r" -type "double3" -13.538352729082765 -1395.8000000000568 -1.1091182943589056e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "73A35CF3-4928-5622-6E81-D688F7A9656E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 211.28580631646497;
+	setAttr ".coi" 143.13841135801405;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3616,7 +3616,7 @@ createNode transform -n "LeftLeg_IK_CTRL_Follow_Foot_GRP" -p "LeftLeg_IK_CTRL_An
 createNode transform -n "LeftLeg_IK_CTRL_Follow_Knee_GRP" -p "LeftLeg_IK_CTRL_Follow_Foot_GRP";
 	rename -uid "E8217A34-45F3-C7C7-A515-5081F9660636";
 	setAttr ".t" -type "double3" -8.8817841970012523e-016 -3.5527136788005009e-015 
-		4.9746635286841157 ;
+		4.2889902879690975 ;
 	setAttr ".r" -type "double3" -7.9513867036587899e-016 0 2.1742073017817003e-017 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 createNode pointConstraint -n "LeftLeg_IK_CTRL_Follow_Knee_GRP_pointConstraint1" 
