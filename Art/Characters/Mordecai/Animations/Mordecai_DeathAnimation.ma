@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
-//Name: Mordecai_Ready_to_Animate.ma
-//Last modified: Fri, Feb 09, 2018 09:49:55 AM
+//Name: Mordecai_DeathAnimation.ma
+//Last modified: Fri, Feb 09, 2018 09:50:21 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "Mordecai_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents/VoodooEscape/Art/Characters/Mordecai/Rig/Mordecai_Rig.ma";
 file -r -ns ":" -dr 1 -rfn "Mordecai_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents/VoodooEscape/Art/Characters/Mordecai/Rig/Mordecai_Rig.ma";
@@ -205,4 +205,4 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Mordecai_Ready_to_Animate.ma
+// End of Mordecai_DeathAnimation.ma
