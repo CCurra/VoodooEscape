@@ -52,7 +52,7 @@ SourceArt/**/*.tga
 Binaries/**
 
 # Builds
-VoodooEscape/Build/**
+/Build/**
 
 # Whitelist PakBlacklist-<BuildConfiguration>.txt files
 !Build/*/
