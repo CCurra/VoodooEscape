@@ -1,13 +1,12 @@
 //Maya ASCII 2016 scene
-//Name: Wizard_GrabbingAnimation.ma
-//Last modified: Fri, Mar 09, 2018 09:15:39 PM
+//Name: Wizard_MagicCharge.ma
+//Last modified: Fri, Mar 23, 2018 12:13:29 PM
 //Codeset: 1252
-file -rdi 1 -ns ":" -rfn "RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents/VoodooEscape/Art/Characters/Wizard/Rig/WizardRig.ma";
-file -r -ns ":" -dr 1 -rfn "RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents/VoodooEscape/Art/Characters/Wizard/Rig/WizardRig.ma";
+file -rdi 1 -ns ":" -rfn "RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents//VoodooEscape/Art/Characters/Wizard/Rig/WizardRig.ma";
+file -r -ns ":" -dr 1 -rfn "RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents//VoodooEscape/Art/Characters/Wizard/Rig/WizardRig.ma";
 requires maya "2016";
 requires "stereoCamera" "10.0";
-requires "stereoCamera" "10.0";
-currentUnit -l foot -a degree -t film;
+currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2016";
 fileInfo "version" "2016";
@@ -17,36 +16,29 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6E267E81-45B5-54A1-D4C9-5C8E5D3E3828";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 74.18525789304087 50.937236921661828 147.93615488248614 ;
-	setAttr ".r" -type "double3" -8.1383527931789796 1827.0000000002906 0 ;
+	setAttr ".t" -type "double3" 1905.6148411327435 2021.3117017758007 4089.2173495748234 ;
+	setAttr ".r" -type "double3" -12.93835272957956 25.399999999996144 8.8022540096435687e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E662D154-4811-0E6A-71E8-88992B22BD18";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".ncp" 0.0032808398950131233;
-	setAttr ".fcp" 1000;
-	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 164.75870008359254;
-	setAttr ".ow" 0.32808398950131235;
+	setAttr ".coi" 4585.9392200740458;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -424.38734650670938 964.74009708295671 341.66512595542088 ;
+	setAttr ".tp" -type "double3" -313.43752485895095 1076.5973733654762 812.42519895955866 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "91582721-4298-2E0A-E599-35803854F1BD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.2717408982310943 84.280894469809567 6.6547447228387053 ;
+	setAttr ".t" -type "double3" -163.64347516312898 2469.5400219171675 636.21766413080559 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	rename -uid "8E5B88FA-424D-07E9-6106-E393A8D8DE96";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".ncp" 0.0032808398950131233;
-	setAttr ".fcp" 328.08398950131232;
-	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 3.2841207349081363;
-	setAttr ".ow" 124.48767749403282;
+	setAttr ".coi" 100.1;
+	setAttr ".ow" 3194.5378793686309;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -55,16 +47,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "5C8D8DB6-4D69-1919-CF0C-1EAF3A6F968F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.5209541786913487 33.292696046794561 46.018783609835275 ;
+	setAttr ".t" -type "double3" -71.237597137427144 881.0937738489813 1816.7830564188573 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "82FD29FD-4583-1F25-BB95-C88F33490C9C";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".ncp" 0.0032808398950131233;
-	setAttr ".fcp" 328.08398950131232;
-	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 3.2841207349081363;
-	setAttr ".ow" 102.46068620019409;
+	setAttr ".coi" 100.1;
+	setAttr ".ow" 2609.6342888261934;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -73,48 +62,29 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "4FE23702-41CB-AC30-FF2C-A889E212387D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 30.286166083112256 26.484832939252605 11.310684142548451 ;
+	setAttr ".t" -type "double3" 2127.6352195776853 671.69674992330545 245.5055679124977 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "C90A1799-431A-631B-D0E5-0995562BFD3E";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".ncp" 0.0032808398950131233;
-	setAttr ".fcp" 328.08398950131232;
-	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 3.2841207349081363;
-	setAttr ".ow" 122.50961096635665;
+	setAttr ".coi" 100.1;
+	setAttr ".ow" 3824.6016549447122;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "left";
-	rename -uid "AA1E1E29-404B-3A5C-8289-7E93859F62C4";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" -106.89097983816127 36.805414598002123 14.964755081807235 ;
-	setAttr ".r" -type "double3" 0 -89.999999999999986 0 ;
-createNode camera -n "leftShape" -p "left";
-	rename -uid "51602507-4ED8-99A8-8864-1089D78AB978";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
-	setAttr ".ow" 76.35185991281088;
-	setAttr ".imn" -type "string" "left1";
-	setAttr ".den" -type "string" "left1_depth";
-	setAttr ".man" -type "string" "left1_mask";
-	setAttr ".hc" -type "string" "viewSet -ls %camera";
-	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6B400C71-4DFC-0097-89DB-16B3309E7869";
+	rename -uid "6F91A6DB-4044-7760-7566-B489E6EDA643";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BBB6662E-4D64-C073-18AB-BDBBF4551B49";
+	rename -uid "9A837AE9-448A-7E00-2B0B-289981138E33";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "670266E4-4585-AAD7-A4A1-36893C5C0C19";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "30664841-4E21-552D-9226-869D57B90386";
+	rename -uid "F7C7A6AD-4993-1B38-965D-0C8DB33894E3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "2DB918AB-49D7-DCDC-32CF-A581C5EB5545";
 	setAttr ".g" yes;
@@ -920,288 +890,344 @@ createNode reference -n "RigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"RigRN"
 		"RigRN" 0
-		"RigRN" 1027
-		2 "|Character|CTRL_GRP|global_CTRL" "translate" " -type \"double3\" 0 0 0"
+		"RigRN" 1125
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_Options" "FK_IK" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_Options" "FK_IK" " -av -k 1"
 		
-		2 "|Character|CTRL_GRP|global_CTRL" "translateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL" "translateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL" "translateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL" "rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL" "rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL" "rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL" "rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandIndex1_CTRL_POS_GRP|LeftHandIndex1_CTRL_AnimData_CONST_GRP|LeftHandIndex1_CTRL_In_Rig_CONST_GRP|LeftHandIndex1_CTRL|LeftHandIndex2_CTRL_POS_GRP|LeftHandIndex2_CTRL_AnimData_CONST_GRP|LeftHandIndex2_CTRL_In_Rig_CONST_GRP|LeftHandIndex2_CTRL|LeftHandIndex3_CTRL_POS_GRP|LeftHandIndex3_CTRL_AnimData_CONST_GRP|LeftHandIndex3_CTRL_In_Rig_CONST_GRP|LeftHandIndex3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandThumb1_CTRL_POS_GRP|LeftHandThumb1_CTRL_AnimData_CONST_GRP|LeftHandThumb1_CTRL_In_Rig_CONST_GRP|LeftHandThumb1_CTRL|LeftHandThumb2_CTRL_POS_GRP|LeftHandThumb2_CTRL_AnimData_CONST_GRP|LeftHandThumb2_CTRL_In_Rig_CONST_GRP|LeftHandThumb2_CTRL|LeftHandThumb3_CTRL_POS_GRP|LeftHandThumb3_CTRL_AnimData_CONST_GRP|LeftHandThumb3_CTRL_In_Rig_CONST_GRP|LeftHandThumb3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandMiddle1_CTRL_POS_GRP|LeftHandMiddle1_CTRL_AnimData_CONST_GRP|LeftHandMiddle1_CTRL_In_Rig_CONST_GRP|LeftHandMiddle1_CTRL|LeftHandMiddle2_CTRL_POS_GRP|LeftHandMiddle2_CTRL_AnimData_CONST_GRP|LeftHandMiddle2_CTRL_In_Rig_CONST_GRP|LeftHandMiddle2_CTRL|LeftHandMiddle3_CTRL_POS_GRP|LeftHandMiddle3_CTRL_AnimData_CONST_GRP|LeftHandMiddle3_CTRL_In_Rig_CONST_GRP|LeftHandMiddle3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandRing1_CTRL_POS_GRP|LeftHandRing1_CTRL_AnimData_CONST_GRP|LeftHandRing1_CTRL_In_Rig_CONST_GRP|LeftHandRing1_CTRL|LeftHandRing2_CTRL_POS_GRP|LeftHandRing2_CTRL_AnimData_CONST_GRP|LeftHandRing2_CTRL_In_Rig_CONST_GRP|LeftHandRing2_CTRL|LeftHandRing3_CTRL_POS_GRP|LeftHandRing3_CTRL_AnimData_CONST_GRP|LeftHandRing3_CTRL_In_Rig_CONST_GRP|LeftHandRing3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_CTRLs_GRP|LeftHandPinky1_CTRL_POS_GRP|LeftHandPinky1_CTRL_AnimData_CONST_GRP|LeftHandPinky1_CTRL_In_Rig_CONST_GRP|LeftHandPinky1_CTRL|LeftHandPinky2_CTRL_POS_GRP|LeftHandPinky2_CTRL_AnimData_CONST_GRP|LeftHandPinky2_CTRL_In_Rig_CONST_GRP|LeftHandPinky2_CTRL|LeftHandPinky3_CTRL_POS_GRP|LeftHandPinky3_CTRL_AnimData_CONST_GRP|LeftHandPinky3_CTRL_In_Rig_CONST_GRP|LeftHandPinky3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandIndex1_CTRL_POS_GRP|RightHandIndex1_CTRL_AnimData_CONST_GRP|RightHandIndex1_CTRL_In_Rig_CONST_GRP|RightHandIndex1_CTRL|RightHandIndex2_CTRL_POS_GRP|RightHandIndex2_CTRL_AnimData_CONST_GRP|RightHandIndex2_CTRL_In_Rig_CONST_GRP|RightHandIndex2_CTRL|RightHandIndex3_CTRL_POS_GRP|RightHandIndex3_CTRL_AnimData_CONST_GRP|RightHandIndex3_CTRL_In_Rig_CONST_GRP|RightHandIndex3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandThumb1_CTRL_POS_GRP|RightHandThumb1_CTRL_AnimData_CONST_GRP|RightHandThumb1_CTRL_In_Rig_CONST_GRP|RightHandThumb1_CTRL|RightHandThumb2_CTRL_POS_GRP|RightHandThumb2_CTRL_AnimData_CONST_GRP|RightHandThumb2_CTRL_In_Rig_CONST_GRP|RightHandThumb2_CTRL|RightHandThumb3_CTRL_POS_GRP|RightHandThumb3_CTRL_AnimData_CONST_GRP|RightHandThumb3_CTRL_In_Rig_CONST_GRP|RightHandThumb3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandMiddle1_CTRL_POS_GRP|RightHandMiddle1_CTRL_AnimData_CONST_GRP|RightHandMiddle1_CTRL_In_Rig_CONST_GRP|RightHandMiddle1_CTRL|RightHandMiddle2_CTRL_POS_GRP|RightHandMiddle2_CTRL_AnimData_CONST_GRP|RightHandMiddle2_CTRL_In_Rig_CONST_GRP|RightHandMiddle2_CTRL|RightHandMiddle3_CTRL_POS_GRP|RightHandMiddle3_CTRL_AnimData_CONST_GRP|RightHandMiddle3_CTRL_In_Rig_CONST_GRP|RightHandMiddle3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandRing1_CTRL_POS_GRP|RightHandRing1_CTRL_AnimData_CONST_GRP|RightHandRing1_CTRL_In_Rig_CONST_GRP|RightHandRing1_CTRL|RightHandRing2_CTRL_POS_GRP|RightHandRing2_CTRL_AnimData_CONST_GRP|RightHandRing2_CTRL_In_Rig_CONST_GRP|RightHandRing2_CTRL|RightHandRing3_CTRL_POS_GRP|RightHandRing3_CTRL_AnimData_CONST_GRP|RightHandRing3_CTRL_In_Rig_CONST_GRP|RightHandRing3_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL" 
-		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
-		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
-		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_CTRLs_GRP|RightHandPinky1_CTRL_POS_GRP|RightHandPinky1_CTRL_AnimData_CONST_GRP|RightHandPinky1_CTRL_In_Rig_CONST_GRP|RightHandPinky1_CTRL|RightHandPinky2_CTRL_POS_GRP|RightHandPinky2_CTRL_AnimData_CONST_GRP|RightHandPinky2_CTRL_In_Rig_CONST_GRP|RightHandPinky2_CTRL|RightHandPinky3_CTRL_POS_GRP|RightHandPinky3_CTRL_AnimData_CONST_GRP|RightHandPinky3_CTRL_In_Rig_CONST_GRP|RightHandPinky3_CTRL" 
-		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "FK_IK" " -av -k 1 1"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "ThumbCurl" " -av -k 1 -10"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "ThumbCurl" " -av -k 1 -9.5"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "IndexCurl" " -av -k 1 10"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "IndexCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "MiddleCurl" " -av -k 1 10"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "MiddleCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "RingCurl" " -av -k 1 10"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "RingCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "PinkyCurl" " -av -k 1 10"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "PinkyCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "Spread" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "Sway" " -av -k 1 0"
+		
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_Options" "Spread" " -av -k 1 -5.4999999999999982"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "FK_IK" " -av -k 1 1"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "ThumbCurl" " -av -k 1 -9.6000000000000014"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "ThumbCurl" " -av -k 1 -9.5"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "IndexCurl" " -av -k 1 9.1000000000000014"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "IndexCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "MiddleCurl" " -av -k 1 9.1000000000000014"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "MiddleCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "RingCurl" " -av -k 1 9.1000000000000014"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "RingCurl" " -av -k 1 6.9"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "PinkyCurl" " -av -k 1 9.1000000000000014"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "PinkyCurl" " -av -k 1 6.9"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "Sway" " -av -k 1 0"
 		
-		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "Spread" " -av -k 1 -8.4"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "Spread" " -av -k 1 -5.4999999999999982"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
-		"translate" " -type \"double3\" 0.0040841692426667889 5.8497282794291499 -8.0456038654150088e-005"
+		"translate" " -type \"double3\" 0.15458808905806243 87.275589856836035 0.63242050162109109"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"translateX" " -av"
@@ -1210,71 +1236,115 @@ createNode reference -n "RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"translateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
-		"rotate" " -type \"double3\" -29.245056802765252 0 0"
+		"rotate" " -type \"double3\" -6.6117762372556799 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
+		"AnimDataMultTrans" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL" 
-		"rotate" " -type \"double3\" 11.544449156304363 0 0"
+		"rotate" " -type \"double3\" 10.171106541437586 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL" 
-		"rotate" " -type \"double3\" 11.544449156304363 0 0"
+		"rotate" " -type \"double3\" 10.171106541437586 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL" 
-		"rotate" " -type \"double3\" 11.544449156304363 0 0"
+		"rotate" " -type \"double3\" 10.171106541437586 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL" 
-		"rotate" " -type \"double3\" -7.494849904313365 0 0"
+		"rotate" " -type \"double3\" -6.3181701924172158 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
-		"rotate" " -type \"double3\" 12.847076792262255 0 0"
+		"rotate" " -type \"double3\" -7.029409323224475 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|Neck_CTRL_POS_GRP|Neck_CTRL_AnimData_CONST_GRP|Neck_CTRL_In_Rig_CONST_GRP|Neck_CTRL|Head_CTRL_POS_GRP|Head_CTRL_AnimData_CONST_GRP|Head_CTRL_In_Rig_CONST_GRP|Head_CTRL" 
+		"InheritRotation" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0.37799010731561639"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotateX" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotateY" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotateZ" " -av"
-		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
+		"rotateX" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
+		"rotateY" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
+		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
+		"rotate" " -type \"double3\" 0 0 -0.19736849115768318"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
-		"translate" " -type \"double3\" 13.270875986334898 -0.1247990469632926 4.1947536668606746"
+		"translate" " -type \"double3\" 327.51474246784562 -74.153240869824799 165.28412631651912"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
 		"translateX" " -av"
@@ -1282,8 +1352,18 @@ createNode reference -n "RigRN";
 		"translateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
 		"translateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
+		"FollowHand" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
+		"GuideCurve" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
-		"translate" " -type \"double3\" -2.7013375941490607 -12.168035616973267 10.052578143329814"
+		"translate" " -type \"double3\" -170.79014158983938 -364.72172853184918 418.08135887650525"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
 		"translateX" " -av"
@@ -1292,7 +1372,7 @@ createNode reference -n "RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
 		"translateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
-		"rotate" " -type \"double3\" 81.726187187541484 -25.023504226910891 9.464202501822502"
+		"rotate" " -type \"double3\" 81.565082110645648 -33.130500877083392 8.7251761366272653"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
 		"rotateX" " -av"
@@ -1300,8 +1380,14 @@ createNode reference -n "RigRN";
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftHand_IK_CTRL_grandparent_POS_GRP|LeftHand_IK_CTRL_grandparent_Global_POS_GRP|LeftHand_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftHand_IK_CTRL_grandparent_inRig_CONST_GRP|LeftHand_IK_CTRL_parent_POS_GRP|LeftHand_IK_CTRL_parent_Global_POS_GRP|LeftHand_IK_CTRL_parent_AnimData_CONST_GRP|LeftHand_IK_CTRL_POS_GRP|LeftHand_IK_CTRL_AnimData_CONST_GRP|LeftHand_IK_CTRL_In_Rig_CONST_GRP|LeftHand_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
 		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
-		"translate" " -type \"double3\" -14.903767211279312 -2.9889310775425635 1.983457634650857"
+		"translate" " -type \"double3\" -370.9384328806641 -142.29352056661082 85.658681897058429"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
 		"translateX" " -av"
@@ -1309,8 +1395,18 @@ createNode reference -n "RigRN";
 		"translateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
 		"translateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
+		"FollowHand" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightForeArm_IK_CTRL_parent_POS_GRP|RightForeArm_IK_CTRL_parent_Global_POS_GRP|RightForeArm_IK_CTRL_parent_AnimData_CONST_GRP|RightForeArm_IK_CTRL_POS_GRP|RightForeArm_IK_CTRL_AnimData_CONST_GRP|RightForeArm_IK_CTRL_In_Rig_CONST_GRP|RightForeArm_IK_CTRL" 
+		"GuideCurve" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
-		"translate" " -type \"double3\" -0.13035240189763694 -10.772076898303251 10.819797833686222"
+		"translate" " -type \"double3\" 172.44938855956883 -421.52753629443566 331.75379887804343"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
 		"translateX" " -av"
@@ -1319,7 +1415,7 @@ createNode reference -n "RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
 		"translateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
-		"rotate" " -type \"double3\" 81.873415615209538 20.69512318577048 -1.9669595059163396"
+		"rotate" " -type \"double3\" 65.515084791333408 45.807986929825994 -30.293603984907417"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
 		"rotateX" " -av"
@@ -1327,8 +1423,14 @@ createNode reference -n "RigRN";
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightHand_IK_CTRL_grandparent_POS_GRP|RightHand_IK_CTRL_grandparent_Global_POS_GRP|RightHand_IK_CTRL_grandparent_AnimData_CONST_GRP|RightHand_IK_CTRL_grandparent_inRig_CONST_GRP|RightHand_IK_CTRL_parent_POS_GRP|RightHand_IK_CTRL_parent_Global_POS_GRP|RightHand_IK_CTRL_parent_AnimData_CONST_GRP|RightHand_IK_CTRL_POS_GRP|RightHand_IK_CTRL_AnimData_CONST_GRP|RightHand_IK_CTRL_In_Rig_CONST_GRP|RightHand_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
-		"translate" " -type \"double3\" -1.4431689536683532 -6.9200357153197318 17.514356892225887"
+		"translate" " -type \"double3\" -129.4631348241694 -151.05156877059753 522.1449142382462"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
 		"translateX" " -av"
@@ -1336,8 +1438,18 @@ createNode reference -n "RigRN";
 		"translateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
 		"translateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
+		"FollowFoot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftLeg_IK_CTRL_parent_POS_GRP|LeftLeg_IK_CTRL_parent_Global_POS_GRP|LeftLeg_IK_CTRL_parent_AnimData_CONST_GRP|LeftLeg_IK_CTRL_POS_GRP|LeftLeg_IK_CTRL_AnimData_CONST_GRP|LeftLeg_IK_CTRL_In_Rig_CONST_GRP|LeftLeg_IK_CTRL" 
+		"GuideCurve" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
-		"translate" " -type \"double3\" 3.4560436639825451 13.062121715301961 0.61912477792160858"
+		"translate" " -type \"double3\" 155.77164329982574 245.94208869336168 -4.3976122468610015"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
 		"translateX" " -av"
@@ -1346,7 +1458,7 @@ createNode reference -n "RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
 		"translateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
-		"rotate" " -type \"double3\" 59.128580295465483 1.5081635023355244 -0.4998702292904309"
+		"rotate" " -type \"double3\" 53.667207288864958 6.1262948742196315 4.3235195310296746"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
 		"rotateX" " -av"
@@ -1354,8 +1466,34 @@ createNode reference -n "RigRN";
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"FootRoll" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ToeTap" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ToeSideToSide" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ToeRotate" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ToeRoll" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"HipPivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"BallPivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"ToePivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"HipSideToSide" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|LeftFoot_IK_CTRL_grandparent_POS_GRP|LeftFoot_IK_CTRL_grandparent_Global_POS_GRP|LeftFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_grandparent_inRig_CONST_GRP|LeftFoot_IK_CTRL_parent_POS_GRP|LeftFoot_IK_CTRL_parent_Global_POS_GRP|LeftFoot_IK_CTRL_parent_AnimData_CONST_GRP|LeftFoot_IK_CTRL_POS_GRP|LeftFoot_IK_CTRL_AnimData_CONST_GRP|LeftFoot_IK_CTRL_In_Rig_CONST_GRP|LeftFoot_IK_CTRL_Reorient_GRP|LeftFoot_IK_CTRL" 
+		"HipBackToFront" " -av -k 1 0"
 		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
-		"translate" " -type \"double3\" 1.4417627037888163 -6.5942969551314343 17.782832548422373"
+		"translate" " -type \"double3\" 77.611971428630113 -270.60933331953538 514.99079904895802"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
 		"translateX" " -av"
@@ -1363,8 +1501,18 @@ createNode reference -n "RigRN";
 		"translateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
 		"translateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
+		"FollowFoot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightLeg_IK_CTRL_parent_POS_GRP|RightLeg_IK_CTRL_parent_Global_POS_GRP|RightLeg_IK_CTRL_parent_AnimData_CONST_GRP|RightLeg_IK_CTRL_POS_GRP|RightLeg_IK_CTRL_AnimData_CONST_GRP|RightLeg_IK_CTRL_In_Rig_CONST_GRP|RightLeg_IK_CTRL" 
+		"GuideCurve" " -av -k 1 1"
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
-		"translate" " -type \"double3\" -2.245454667096729 7.4137975927089839 0.57470582728861963"
+		"translate" " -type \"double3\" -118.64089757061325 370.32913214732184 7.1400551119021713"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
 		"translateX" " -av"
@@ -1373,16 +1521,41 @@ createNode reference -n "RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
 		"translateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
-		"rotate" " -type \"double3\" 59.956145279158136 0 0"
+		"rotate" " -type \"double3\" 52.92127787089548 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
 		"rotateY" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
 		"rotateZ" " -av"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"AnimDataMult" " -av -k 1 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"FollowBody" " -av -k 1"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ParentToGlobal" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"FootRoll" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ToeTap" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ToeSideToSide" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ToeRotate" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ToeRoll" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"HipPivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"BallPivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"ToePivot" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"HipSideToSide" " -av -k 1 0"
+		2 "|Character|CTRL_GRP|global_CTRL|RightFoot_IK_CTRL_grandparent_POS_GRP|RightFoot_IK_CTRL_grandparent_Global_POS_GRP|RightFoot_IK_CTRL_grandparent_AnimData_CONST_GRP|RightFoot_IK_CTRL_grandparent_inRig_CONST_GRP|RightFoot_IK_CTRL_parent_POS_GRP|RightFoot_IK_CTRL_parent_Global_POS_GRP|RightFoot_IK_CTRL_parent_AnimData_CONST_GRP|RightFoot_IK_CTRL_POS_GRP|RightFoot_IK_CTRL_AnimData_CONST_GRP|RightFoot_IK_CTRL_In_Rig_CONST_GRP|RightFoot_IK_CTRL_Reorient_GRP|RightFoot_IK_CTRL" 
+		"HipBackToFront" " -av -k 1 0"
 		2 "layer1" "visibility" " 1"
 		2 "MeshLayer" "displayType" " 2"
-		2 "MeshLayer" "visibility" " 1"
 		2 "ControlLayer" "hideOnPlayback" " 1"
 		5 4 "RigRN" "|Character|CTRL_GRP|global_CTRL.translateX" "RigRN.placeHolderList[1]" 
 		""
@@ -2981,33 +3154,33 @@ lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode1";
 	rename -uid "F8AEF67A-465C-ADED-888F-75BB2093C3EB";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"left\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
 		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
 		+ "                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 821\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"left\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 806\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
 		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 821\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n"
+		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 806\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n"
 		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
-		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
+		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 820\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
+		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 805\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 820\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 805\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
 		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
 		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 821\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
-		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
+		+ "                -width 806\n                -height 334\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
+		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
 		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 821\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 1\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
+		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 806\n            -height 334\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
+		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
 		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1647\n                -height 713\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 1\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 1617\n                -height 713\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1647\n            -height 713\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1617\n            -height 713\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
 		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
@@ -3046,13 +3219,13 @@ createNode script -n "uiConfigurationScriptNode1";
 		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n"
 		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1647\\n    -height 713\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 1\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1647\\n    -height 713\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1617\\n    -height 713\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1617\\n    -height 713\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode1";
 	rename -uid "EF926147-49BC-0A18-CEF4-8AA926163B43";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 175 -ast 1 -aet 175 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 120 ";
 	setAttr ".st" 6;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo1";
 	rename -uid "4CC33AFC-47E5-183A-BE26-24B4F0E061DA";
@@ -4565,1812 +4738,2158 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo1";
 	setAttr ".tgi[0].ni[500].y" -665.71429443359375;
 	setAttr ".tgi[0].ni[500].nvs" 1923;
 createNode animCurveTL -n "global_CTRL_translateX";
-	rename -uid "B7D0E67C-446B-0D2A-C6FA-87B3F5EC2DF1";
-	setAttr ".tan" 9;
+	rename -uid "64E6F9A2-44C0-855F-6295-778D6979177F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTL -n "global_CTRL_translateY";
-	rename -uid "68E9BB9C-477F-DD1A-9213-6AA8B64E2269";
-	setAttr ".tan" 9;
+	rename -uid "FBFF008B-4E91-6BDE-2D77-D5AEBF4FE1D9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTL -n "global_CTRL_translateZ";
-	rename -uid "38CEBE55-4682-F3D7-795A-31A5B5E0D8D7";
-	setAttr ".tan" 9;
+	rename -uid "CDB006CB-4EC6-624C-9E1D-558C000650AA";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTL -n "LeftFoot_IK_CTRL_translateX";
-	rename -uid "3E3E9760-404F-B0C2-11A2-6E819856BC0C";
-	setAttr ".tan" 9;
+	rename -uid "80BFB740-47CA-B830-ECAC-3980B6162EC8";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 3.4560436639825451 19 3.4391528235291084
-		 27 2.5786222336636979 34 3.3341452046048823 44 3.5070696610680905 65 3.4243334689837042
-		 76 3.3074730058313526 91 3.4743994043220083 113 3.3381953127467825 141 3.5061482666010999
-		 168 3.3385280648834521;
+	setAttr -s 6 ".ktv[0:5]"  1 148.18257167555996 50 184.86730015073061
+		 60 206.03859263791915 78 210.08955483995362 96 215.86720326386492 120 148.18257167555996;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "LeftFoot_IK_CTRL_translateY";
-	rename -uid "9DE1CCF4-4D80-624D-3708-7BB051A942A1";
-	setAttr ".tan" 9;
+	rename -uid "6BABDED8-4A0B-6D76-C51C-62A5E806536B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 13.062121715301961 19 13.596001788933032
-		 27 4.5530250728085981 34 11.578863677905133 44 12.843737757934738 65 12.948511046012605
-		 76 11.662547523588053 91 13.177885008002384 113 11.823542260098126 141 13.493579205471837
-		 168 11.826850974527551;
+	setAttr -s 6 ".ktv[0:5]"  1 235.9923773844659 50 317.60986071312846
+		 60 230.7785559564725 78 266.59698687665156 96 324.7308394381505 120 235.9923773844659;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "LeftFoot_IK_CTRL_translateZ";
-	rename -uid "06DA5427-45C4-72E4-ACB4-F2A60320D280";
-	setAttr ".tan" 9;
+	rename -uid "7E1A27E2-4DF7-A1D2-1041-839349A432D3";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.61912477792160858 19 10.380226668295551
-		 27 3.9718489695568437 34 -3.2329753572171458 44 -9.4536367030112061 65 3.4074646767078689
-		 76 1.3317089567843559 91 -0.29879310513392299 113 -0.38445097512233539 141 -0.27882645151925972
-		 168 -0.38424170946128672;
+	setAttr -s 6 ".ktv[0:5]"  1 16.606887398223019 50 128.61496870055302
+		 60 -140.42750232703796 78 -200.00813895743681 96 -186.8523428913735 120 16.606887398223019;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
+createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateX";
+	rename -uid "11F1F964-4983-8590-B710-91892E755DCC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 193.17327763325517 50 493.1572363255375
+		 54 250.98640967019062 60 -394.24638519103974 80 -374.43457361202331 95 -383.67258612194337
+		 120 410.0633884681618;
+createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateY";
+	rename -uid "94E21BCC-4160-17CD-040D-F3A7300EC16D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 -5.5068889609976868 50 -74.275472758593452
+		 54 -111.93198137979014 60 -166.63214198998196 80 -151.71242778328488 95 -120.1873876721328
+		 120 -70.620083495848121;
+createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateZ";
+	rename -uid "3A3129E0-4115-DA8B-FD46-CA9D45C978F1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 -58.5961325663135 50 38.759337297198265
+		 54 66.69371081998753 60 79.297350951066235 80 131.86394525387368 95 143.66299679705693
+		 120 167.00923118776694;
+createNode animCurveTL -n "LeftHand_IK_CTRL_translateX";
+	rename -uid "58BB22D2-4354-D9DE-C69E-2CAABF0FB980";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -330.10692070066438 50 217.96546565148049
+		 54 -61.446231331115428 60 -712.54222603070912 83 -674.88250920725284 93 -675.44521830938618
+		 104 -478.83378203374917 120 -107.20470222836644;
+createNode animCurveTL -n "LeftHand_IK_CTRL_translateY";
+	rename -uid "B19177A2-4BA1-2978-CC0C-4A9EDA7C8DEB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -523.17487550329258 50 -303.25516484275431
+		 54 -407.99636763629371 60 -614.71817272280953 83 -611.36734880525626 93 -611.54382107700326
+		 104 -423.83428575613414 120 -359.90628541904448;
+createNode animCurveTL -n "LeftHand_IK_CTRL_translateZ";
+	rename -uid "1EBBE21B-4C58-0DFA-8162-DAA8C4C0105F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 135.44607510890876 50 39.865312410751741
+		 54 89.681610069509006 60 169.95894201794187 83 246.87412688843975 93 265.20695731918988
+		 104 317.35391075566889 120 439.47125572033042;
 createNode animCurveTL -n "LeftLeg_IK_CTRL_translateX";
-	rename -uid "4AFAFDC2-45AA-A47D-295A-999D08540217";
-	setAttr ".tan" 9;
+	rename -uid "3E3458A4-4870-6907-84AF-A29373373D9F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.4431689536683532 15 -1.4431689536683532
-		 20 -1.4431689536683532 30 -1.4884979720726252 42 -1.4257639373877851 49 -1.3671554679499363
-		 75 -1.3809260389056173 96 -1.3809260389056173 137 -1.3809260389056173;
+	setAttr -s 6 ".ktv[0:5]"  1 -123.34907713287812 50 -151.61548878222197
+		 60 -179.98736405180136 78 -179.4281945042448 96 -178.73195764094609 120 -123.34907713287812;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "LeftLeg_IK_CTRL_translateY";
-	rename -uid "034DAE74-4420-1613-1E68-469AB2099895";
-	setAttr ".tan" 9;
+	rename -uid "81A94EC5-4B5F-B97E-57EB-919ABEE91C9A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.9200357153197318 15 -6.9200357153197318
-		 20 -6.9200357153197318 30 -4.1408936584526685 42 -8.9530250625855086 49 -13.136657313817224
-		 75 -12.010456771667709 96 -12.010456771667709 137 -12.010456771667709;
+	setAttr -s 6 ".ktv[0:5]"  1 -143.20535000242464 50 -241.54421397003321
+		 60 -125.15175954667453 78 -153.59306002580732 96 -213.18339909435238 120 -143.20535000242464;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "LeftLeg_IK_CTRL_translateZ";
-	rename -uid "12201FAA-418D-42AF-75E0-3DBE485B3B58";
-	setAttr ".tan" 9;
+	rename -uid "C79FE7BB-4A5F-9FC5-7708-88921D1EB87C";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 17.514356892225887 15 17.514356892225887
-		 20 17.514356892225887 30 21.00175354883044 42 19.571667942989258 49 17.138388133856925
-		 75 17.206498475269484 96 17.206498475269484 137 17.206498475269484;
+	setAttr -s 6 ".ktv[0:5]"  1 545.35594653565738 50 645.77243408257823
+		 60 388.82967085514798 78 325.26865838600645 96 331.14298805076623 120 545.35594653565738;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "RightFoot_IK_CTRL_translateX";
-	rename -uid "F1A6E9C5-434A-0226-3F0C-E19A5E7BB173";
-	setAttr ".tan" 9;
+	rename -uid "2A701E57-4878-C0F9-DA71-149633B615C5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -2.245454667096729 19 -2.2162447065885433
-		 27 -2.1022900700624021 34 -2.1286095891829229 44 -2.3091430002068871 65 -2.210265520045033
-		 76 -2.0962044796694017 91 -2.2649438637802199 113 -2.1290512865414142 141 -2.2966201127798467
-		 168 -2.1293832776358754;
+	setAttr -s 6 ".ktv[0:5]"  1 -122.94051344867711 50 -101.56253383208876
+		 60 -67.669563340134019 78 -71.789830651657581 96 -77.542222651900801 120 -122.94051344867711;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "RightFoot_IK_CTRL_translateY";
-	rename -uid "A72C58AE-4162-8198-D717-12AB430AAA14";
-	setAttr ".tan" 9;
+	rename -uid "61CC72FF-4EA2-1371-0D0B-C6BFF994D342";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 7.4137975927089839 19 7.8392516986230056
-		 27 6.2196907790768519 34 5.9733894425371297 44 7.3072855929785563 65 7.2692268792831358
-		 76 5.9865332233653152 91 7.5397491418416847 113 6.186422465373111 141 7.855206495382995
-		 168 6.1897286974986905;
+	setAttr -s 6 ".ktv[0:5]"  1 358.8427817362678 50 445.06331463438221
+		 60 366.82271119000467 78 403.30109166262258 96 461.28606259561627 120 358.8427817362678;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "RightFoot_IK_CTRL_translateZ";
-	rename -uid "9E6AF38A-4088-FF98-91CF-F388EFCA5436";
-	setAttr ".tan" 9;
+	rename -uid "6B43AC50-4CC6-3197-F58B-2CBB2D3FDB1A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.57470582728861963 19 10.341105313780114
-		 27 4.3789150329226558 34 -3.2937771673389631 44 -9.4997876114464983 65 3.3615702560967287
-		 76 1.2712975188811202 91 -0.34184623978509754 113 -0.44270861266803302 141 -0.31833545131488472
-		 168 -0.44246220178787565;
+	setAttr -s 6 ".ktv[0:5]"  1 28.027402531378318 50 140.55293234354488
+		 60 -129.81981933798957 78 -188.99391590909153 96 -175.18615949251031 120 28.027402531378318;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
+createNode animCurveTL -n "RightForeArm_IK_CTRL_translateX";
+	rename -uid "008CE7C8-4019-6FAA-00C2-29B2F6EEF082";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 -181.51233263813114 50 -493.67204096474569
+		 54 -260.09462535072544 60 371.23633748737791 80 342.28085645944327 95 350.17275210583284
+		 120 -454.63895669954934;
+createNode animCurveTL -n "RightForeArm_IK_CTRL_translateY";
+	rename -uid "51B6AD88-4FFF-7ECD-0C6F-69BE9C044EEF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 0.052425196056708839 50 -64.038037380534831
+		 54 -89.623759398799109 60 -124.59651917492384 80 -140.35904987438505 95 -171.58734255173675
+		 120 -138.89333998993854;
+createNode animCurveTL -n "RightForeArm_IK_CTRL_translateZ";
+	rename -uid "5B6E8B99-4933-DF5A-DA88-F194BAE49099";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 -68.082567265090773 50 -50.501342386330933
+		 54 5.5314075714700026 60 113.62270880175642 80 161.49206571238747 95 174.94191203218034
+		 120 75.295435165985026;
+createNode animCurveTL -n "RightHand_IK_CTRL_translateX";
+	rename -uid "41F476A8-483B-E2AC-D651-E682B01CACBA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 297.61847503862975 50 -249.19744984873034
+		 54 31.962315321619602 60 685.85619931128213 83 650.02740277457099 93 651.01574326517471
+		 104 499.00794524512031 120 102.26348010697561;
+createNode animCurveTL -n "RightHand_IK_CTRL_translateY";
+	rename -uid "B5FEC8EF-471A-E93C-9BDF-41A55B564D9C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 -530.49587216983753 50 -288.68466224519079
+		 54 -387.87673908169347 60 -585.45246424731772 83 -581.9778929583141 93 -582.20132203849801
+		 104 -449.18913156500167 120 -420.65679630422818;
+createNode animCurveTL -n "RightHand_IK_CTRL_translateZ";
+	rename -uid "F6719CB6-47AF-13F4-5538-CC9CD9CD2F8B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 134.10906257737912 50 45.265348722808135
+		 54 87.357105626161854 60 150.19915211936052 83 227.97866516039713 93 246.29296880863117
+		 104 259.64820975166646 120 348.43344033867072;
 createNode animCurveTL -n "RightLeg_IK_CTRL_translateX";
-	rename -uid "64A47479-4F33-90DD-C269-D0936EF62A6A";
-	setAttr ".tan" 9;
+	rename -uid "BC1826BD-44E2-860B-1E5D-E89B868F8B58";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.4417627037888163 15 1.4417627037888163
-		 20 1.4417627037888163 30 1.4833109614954947 42 1.4221102499963199 49 1.3661293223767177
-		 75 1.3798310337968753 96 1.3798310337968753 137 1.3798310337968753;
+	setAttr -s 6 ".ktv[0:5]"  1 84.146527968759088 50 54.101663758597823
+		 60 27.059859547356965 78 26.569701038355248 96 25.866797072904021 120 84.146527968759088;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "RightLeg_IK_CTRL_translateY";
-	rename -uid "7274F8EA-431D-2912-2C69-40888C6FE261";
-	setAttr ".tan" 9;
+	rename -uid "A48903D1-4D91-5CB6-2F86-CC84758DFB04";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.5942969551314343 15 -6.5942969551314343
-		 20 -6.5942969551314343 30 -3.8170819258591115 42 -8.6284223166115748 49 -12.810709528414096
-		 75 -11.684546853184187 96 -11.684546853184187 137 -11.684546853184187;
+	setAttr -s 6 ".ktv[0:5]"  1 -262.92990213286117 50 -360.62454959286339
+		 60 -243.42066869834176 78 -271.82685211839214 96 -331.42042329434418 120 -262.92990213286117;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "RightLeg_IK_CTRL_translateZ";
-	rename -uid "E9D8DC6C-4CD3-75AD-849F-638D23615ADE";
-	setAttr ".tan" 9;
+	rename -uid "2F67B576-49A3-6853-5703-C6A61A7CF3F2";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 17.782832548422373 15 17.782832548422373
-		 20 17.782832548422373 30 21.271811074598617 42 19.839000142546009 49 17.403347414938285
-		 75 17.472094781380964 96 17.472094781380964 137 17.472094781380964;
+	setAttr -s 6 ".ktv[0:5]"  1 538.17417267557289 50 638.70304990738975
+		 60 381.98580962887365 78 318.40852565281745 96 324.24917678059052 120 538.17417267557289;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTL -n "Root_CTRL_translateX";
-	rename -uid "4F2AC896-470A-68BC-CE58-BB821CB12DDA";
-	setAttr ".tan" 9;
+	rename -uid "1ABEAB33-46FC-8B5D-3F0B-F6970F02193B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0.0040841692426667889 20 0.0028522342722169308
-		 30 -0.0041274407703013804 42 -0.00074014074992876549 56 0.0030347722850284794 75 0.0014390855396459357
-		 96 0.0027720454608097826 119 0.0032829582405742202 137 0.0027720454608097826 152 0.0029863195401661612
-		 168 0.0017238685319439944;
+	setAttr -s 5 ".ktv[0:4]"  1 0.15471484833201324 50 0.20431399652371518
+		 57 0.14727180629874193 60 0.14732083184285483 120 0.15471484833201324;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTL -n "Root_CTRL_translateY";
-	rename -uid "DFF65481-46F2-C4F8-F2D3-999FC422B7EF";
-	setAttr ".tan" 9;
+	rename -uid "4F84A87A-4B7F-788F-D482-01BF21C08043";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 5.8497282794291499 20 4.1770999595418736
-		 30 -6.023792120783817 56 4.3466840384334064 75 2.0611925896380612 96 3.970382165989407
-		 119 4.7021591219702072 137 3.1364692327566899 152 4.2772854964907836 168 2.4690853640414159;
-	setAttr -s 10 ".kit[0:9]"  1 9 9 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kot[0:9]"  1 9 9 9 9 9 9 9 
-		9 9;
-	setAttr -s 10 ".kix[0:9]"  0.016842981800436974 0.0033387958537787199 
-		0.27869796752929688 0.0076084216125309467 0.14380039274692535 0.022769369184970856 
-		0.067059189081192017 0.10558292269706726 0.063370324671268463 0.012095265090465546;
-	setAttr -s 10 ".kiy[0:9]"  0.99985820055007935 -0.99999439716339111 
-		0.96037882566452026 0.99997109174728394 -0.98960673809051514 0.99974071979522705 
-		-0.9977489709854126 -0.99441051483154297 -0.99799007177352905 -0.9999268651008606;
-	setAttr -s 10 ".kox[0:9]"  0.016842987388372421 0.0033387958537787199 
-		0.27869796752929688 0.0076084216125309467 0.14380039274692535 0.022769369184970856 
-		0.067059189081192017 0.10558292269706726 0.063370324671268463 0.012095265090465546;
-	setAttr -s 10 ".koy[0:9]"  0.99985820055007935 -0.99999439716339111 
-		0.96037882566452026 0.99997109174728394 -0.98960673809051514 0.99974071979522705 
-		-0.9977489709854126 -0.99441051483154297 -0.99799007177352905 -0.9999268651008606;
+	setAttr -s 5 ".ktv[0:4]"  1 87.47864375744868 50 161.99858709410714
+		 57 75.555739341919448 60 75.634272671942909 120 87.47864375744868;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTL -n "Root_CTRL_translateZ";
-	rename -uid "4222F91D-4503-778A-E620-EE9EEC95E400";
-	setAttr ".tan" 9;
+	rename -uid "EFA8E027-4494-05B9-D7A5-4582F6C4AB6D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -8.0456038654150088e-005 20 -2.715559343402111
-		 30 3.3133607967938161 42 2.1763092544790621 56 -5.9783456990335927e-005 75 -2.834924679414306e-005
-		 96 -5.4607873349888855e-005 119 -6.467259298204985e-005 137 -5.4607873349888855e-005
-		 152 -5.8828962715966177e-005 168 -3.3959325629537872e-005;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.0030478031339573855 50 -102.85578211498043
+		 57 37.310334736793827 60 37.064560378200198 120 -0.0030478031339573855;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "global_CTRL_rotateX";
-	rename -uid "D52142A3-47AA-BFC9-3A9D-5790B2D3E5BD";
-	setAttr ".tan" 9;
+	rename -uid "3A848385-4BCB-775B-36E9-BFB3A84C1647";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "global_CTRL_rotateY";
-	rename -uid "AF524BB7-4EA0-C01C-9317-B686554BB121";
-	setAttr ".tan" 9;
+	rename -uid "A653A299-407C-5C6F-C3F5-FC80095BC901";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "global_CTRL_rotateZ";
-	rename -uid "782377CB-4318-30DF-35FD-FF978405D679";
-	setAttr ".tan" 9;
+	rename -uid "25FE31B0-4F6A-0061-967E-FD93CDE6A3C5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 15 0 20 0 30 0 42 0 49 0 64 0 75 0 96 0
-		 137 0;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTU -n "global_CTRL_scaleX";
-	rename -uid "39824096-40CC-677A-E28D-CBAF13004861";
-	setAttr ".tan" 9;
+	rename -uid "BE6D5534-43A2-7302-E6B5-83B8F59BA9F3";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 15 1 20 1 30 1 42 1 49 1 64 1 75 1 96 1
-		 137 1;
+	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "global_CTRL_scaleY";
-	rename -uid "0CC4358D-45A0-AD8F-AE9D-69BC142B9FD9";
-	setAttr ".tan" 9;
+	rename -uid "2E9B8505-40E0-E301-3298-0A80BC6765E5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 15 1 20 1 30 1 42 1 49 1 64 1 75 1 96 1
-		 137 1;
+	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "global_CTRL_scaleZ";
-	rename -uid "32CF7176-4D03-ADF2-A8BE-8FA07D37655E";
-	setAttr ".tan" 9;
+	rename -uid "ABF5C9C9-45A1-063F-7F0D-8C91B7586647";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 1 15 1 20 1 30 1 42 1 49 1 64 1 75 1 96 1
-		 137 1;
+	setAttr ".ktv[0]"  1 1;
 createNode animCurveTA -n "LeftHandIndex1_CTRL_rotateX";
-	rename -uid "7AF05C9C-4AE5-193C-B3DF-4B9492FD7D31";
-	setAttr ".tan" 9;
+	rename -uid "D058C37B-4B03-D253-FDD7-5A98A6A98611";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.5753684906623969e-014 15 -1.5753684906623969e-014
-		 20 -1.5753684906623969e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -33.60842385997676 50 -33.60842385997676
+		 60 -33.60842385997676 95 -33.60842385997676 99 0;
 createNode animCurveTA -n "LeftHandIndex1_CTRL_rotateY";
-	rename -uid "EC15A1B2-4B23-73FA-E883-0EAE8FF7E992";
-	setAttr ".tan" 9;
+	rename -uid "92360199-4C59-EF15-1DFA-738D1EF5D57D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.033680271475643e-014 15 1.033680271475643e-014
-		 20 1.033680271475643e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 1.033680271475643e-014 50 1.033680271475643e-014
+		 60 1.033680271475643e-014 95 1.033680271475643e-014;
 createNode animCurveTA -n "LeftHandIndex1_CTRL_rotateZ";
-	rename -uid "E3FA2D21-4A04-D08F-7C51-31B9ACC104C2";
-	setAttr ".tan" 9;
+	rename -uid "DFBF5E19-4800-1E5B-73FD-FBB33E188C58";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1927080055488187e-014 15 -1.1927080055488187e-014
-		 20 -1.1927080055488187e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 -1.1927080055488187e-014 50 -1.1927080055488187e-014
+		 60 -1.1927080055488187e-014 95 -1.1927080055488187e-014;
 createNode animCurveTU -n "LeftHandIndex1_CTRL_AnimDataMult";
-	rename -uid "26F29606-40A7-420F-3D15-96B2549D4793";
-	setAttr ".tan" 9;
+	rename -uid "D20834F6-4DF6-C7EB-F21D-7FBAF8D49EDF";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "LeftHandIndex2_CTRL_rotateX";
-	rename -uid "0E6B7415-45BC-B187-2364-61B9E01289A8";
-	setAttr ".tan" 9;
+	rename -uid "C96FC963-469D-3E67-C7A8-719B94A0BDE7";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 2.0482896389042301e-013 15 2.0482896389042301e-013
-		 20 2.0482896389042301e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 2.0482896389042301e-013 50 2.0482896389042301e-013
+		 60 2.0482896389042301e-013;
 createNode animCurveTA -n "LeftHandIndex2_CTRL_rotateY";
-	rename -uid "40E75EA0-4A97-551B-15F6-24B58F1A4F27";
-	setAttr ".tan" 9;
+	rename -uid "A0192F2D-47B3-D9AC-3084-839B555F92CE";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.3854160110976395e-015 15 -2.3854160110976395e-015
-		 20 -2.3854160110976395e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.3854160110976395e-015 50 -2.3854160110976395e-015
+		 60 -2.3854160110976395e-015;
 createNode animCurveTA -n "LeftHandIndex2_CTRL_rotateZ";
-	rename -uid "BF176958-44C3-68DB-D75C-FCACFD1202C1";
-	setAttr ".tan" 9;
+	rename -uid "3F881DAF-4FE6-A64F-EC2D-2EA84079C6A4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 7.9513867036587988e-016 15 7.9513867036587988e-016
-		 20 7.9513867036587988e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 7.9513867036587988e-016 50 7.9513867036587988e-016
+		 60 7.9513867036587988e-016;
 createNode animCurveTU -n "LeftHandIndex2_CTRL_AnimDataMult";
-	rename -uid "7583D936-41AF-5BF1-1D7C-488A2956B818";
-	setAttr ".tan" 9;
+	rename -uid "D5ABE9D1-4881-C362-C939-E29C7DD99531";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandIndex3_CTRL_rotateX";
-	rename -uid "82F2285C-4F85-AB1F-F422-2990BFA76551";
-	setAttr ".tan" 9;
+	rename -uid "959EE821-4C21-6F7E-5580-379BD10BBB51";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -8.8487131172084089e-014 15 -8.8487131172084089e-014
-		 20 -8.8487131172084089e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -8.8487131172084089e-014 50 -8.8487131172084089e-014
+		 60 -8.8487131172084089e-014;
 createNode animCurveTA -n "LeftHandIndex3_CTRL_rotateY";
-	rename -uid "6ECF2287-4455-0E1E-017A-63AB62A5DB47";
-	setAttr ".tan" 9;
+	rename -uid "8AA1F313-4F79-2DC9-30EA-E09EE5C3F691";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1927080055488196e-015 15 -1.1927080055488196e-015
-		 20 -1.1927080055488196e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.1927080055488196e-015 50 -1.1927080055488196e-015
+		 60 -1.1927080055488196e-015;
 createNode animCurveTA -n "LeftHandIndex3_CTRL_rotateZ";
-	rename -uid "8CE1B044-43A4-D573-FED6-0394BEED44BC";
-	setAttr ".tan" 9;
+	rename -uid "4CCFCE85-4B87-1F45-677A-889C1DF0F350";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.1623246953355691e-015 15 -6.1623246953355691e-015
-		 20 -6.1623246953355691e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.1623246953355691e-015 50 -6.1623246953355691e-015
+		 60 -6.1623246953355691e-015;
 createNode animCurveTU -n "LeftHandIndex3_CTRL_AnimDataMult";
-	rename -uid "6CBF7B16-41AF-4B59-FC93-54A62260900C";
-	setAttr ".tan" 9;
+	rename -uid "908BD08C-4BC7-70F2-8D78-6C9AB72461FE";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandThumb1_CTRL_rotateX";
-	rename -uid "F5D96FD0-437E-EA52-83D5-278C38975996";
-	setAttr ".tan" 9;
+	rename -uid "3E72DDE1-4736-6ACD-E991-4FBB6EC189A8";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.9513867036587939e-016 15 -7.9513867036587939e-016
-		 20 -7.9513867036587939e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -7.9513867036587939e-016 50 -7.9513867036587939e-016
+		 60 -7.9513867036587939e-016;
 createNode animCurveTA -n "LeftHandThumb1_CTRL_rotateY";
-	rename -uid "88C8E75C-4A1A-B63E-D50D-6B81B7E075D2";
-	setAttr ".tan" 9;
+	rename -uid "61DF3EB9-4A58-56E0-2880-A5849C33F688";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 6.361109362927032e-015 15 6.361109362927032e-015
-		 20 6.361109362927032e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 6.361109362927032e-015 50 6.361109362927032e-015
+		 60 6.361109362927032e-015;
 createNode animCurveTA -n "LeftHandThumb1_CTRL_rotateZ";
-	rename -uid "8C8568E6-44F7-FB9E-2F37-C58389E9D8A1";
-	setAttr ".tan" 9;
+	rename -uid "90AD6A69-4131-274D-C564-F989D76CAED8";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.9083328088781094e-014 15 1.9083328088781094e-014
-		 20 1.9083328088781094e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.9083328088781094e-014 50 1.9083328088781094e-014
+		 60 1.9083328088781094e-014;
 createNode animCurveTU -n "LeftHandThumb1_CTRL_AnimDataMult";
-	rename -uid "3DBC3F27-47BF-C8F3-40B7-479424C8425B";
-	setAttr ".tan" 9;
+	rename -uid "D9CBD2B3-47CF-398A-2FA5-63A8544B9B5D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandThumb2_CTRL_rotateX";
-	rename -uid "5CC868A1-4F97-6EDA-B508-229774B90D9C";
-	setAttr ".tan" 9;
+	rename -uid "FBA3303E-499C-9157-71EA-EE8A3E78B7C4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.3854160110976368e-015 15 -2.3854160110976368e-015
-		 20 -2.3854160110976368e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.3854160110976368e-015 50 -2.3854160110976368e-015
+		 60 -2.3854160110976368e-015;
 createNode animCurveTA -n "LeftHandThumb2_CTRL_rotateY";
-	rename -uid "8FA0DCE2-4E2C-B43A-BA81-01B4FD5EDB47";
-	setAttr ".tan" 9;
+	rename -uid "92578962-4F60-F9A8-0D8B-76B347ADBC12";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.590277340731758e-015 15 1.590277340731758e-015
-		 20 1.590277340731758e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.590277340731758e-015 50 1.590277340731758e-015
+		 60 1.590277340731758e-015;
 createNode animCurveTA -n "LeftHandThumb2_CTRL_rotateZ";
-	rename -uid "A96E87CD-4788-69D8-C150-CFA72F93701D";
-	setAttr ".tan" 9;
+	rename -uid "ABC81CF2-46B2-D3CA-5464-0B8A3538DD22";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.180554681463516e-015 15 3.180554681463516e-015
-		 20 3.180554681463516e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 3.180554681463516e-015 50 3.180554681463516e-015
+		 60 3.180554681463516e-015;
 createNode animCurveTU -n "LeftHandThumb2_CTRL_AnimDataMult";
-	rename -uid "D0CE4721-404D-B22F-CF8F-9ABBA08680EB";
-	setAttr ".tan" 9;
+	rename -uid "EA93E665-41B5-729A-8DDB-BAAFAA36F33E";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandThumb3_CTRL_rotateX";
-	rename -uid "97556D52-471D-A9E3-B200-05A27FFB58D7";
-	setAttr ".tan" 9;
+	rename -uid "6B68479A-4D0A-53C9-4F5D-EF9D522A9145";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.3854160110976376e-015 15 -2.3854160110976376e-015
-		 20 -2.3854160110976376e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.3854160110976376e-015 50 -2.3854160110976376e-015
+		 60 -2.3854160110976376e-015;
 createNode animCurveTA -n "LeftHandThumb3_CTRL_rotateY";
-	rename -uid "6DAABB3F-4977-97A8-F4DA-8A84A6F10229";
-	setAttr ".tan" 9;
+	rename -uid "57B1F8D0-4402-20D2-E190-C194EA332E1D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.1805546814635168e-015 15 -3.1805546814635168e-015
-		 20 -3.1805546814635168e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.1805546814635168e-015 50 -3.1805546814635168e-015
+		 60 -3.1805546814635168e-015;
 createNode animCurveTA -n "LeftHandThumb3_CTRL_rotateZ";
-	rename -uid "C5699ED6-453C-D1BC-705A-42836AF612A1";
-	setAttr ".tan" 9;
+	rename -uid "6F9B051B-4D4E-6164-1B58-B0897627B1F3";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.1805546814635168e-015 15 -3.1805546814635168e-015
-		 20 -3.1805546814635168e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.1805546814635168e-015 50 -3.1805546814635168e-015
+		 60 -3.1805546814635168e-015;
 createNode animCurveTU -n "LeftHandThumb3_CTRL_AnimDataMult";
-	rename -uid "AF97C765-46B5-5A7E-5698-DBAA69F4B700";
-	setAttr ".tan" 9;
+	rename -uid "47756F62-4339-48A6-B7B3-75BB5C1134DA";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandMiddle1_CTRL_rotateX";
-	rename -uid "F304D4CF-4752-7DB6-B731-6FBF2D33F1F0";
-	setAttr ".tan" 9;
+	rename -uid "0BBB1987-4EF7-F789-B1B0-75A707D849ED";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 7.2109138168805681e-014 15 7.2109138168805681e-014
-		 20 7.2109138168805681e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -33.60842385997676 50 -33.60842385997676
+		 60 -33.60842385997676 95 -33.60842385997676 99 0;
 createNode animCurveTA -n "LeftHandMiddle1_CTRL_rotateY";
-	rename -uid "86514C8E-475C-B983-71A1-4ABEB9958CFD";
-	setAttr ".tan" 9;
+	rename -uid "02B2AEAB-474E-1039-68D1-E7B59135F5A5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.3854160110976384e-015 15 -2.3854160110976384e-015
-		 20 -2.3854160110976384e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 -2.3854160110976384e-015 50 -2.3854160110976384e-015
+		 60 -2.3854160110976384e-015 95 -2.3854160110976384e-015;
 createNode animCurveTA -n "LeftHandMiddle1_CTRL_rotateZ";
-	rename -uid "13ADE128-4212-CD18-9B21-30BAC10BCF32";
-	setAttr ".tan" 9;
+	rename -uid "926C23BC-4EAD-E986-D490-9BABA5E2A0C9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.192708005548819e-014 15 1.192708005548819e-014
-		 20 1.192708005548819e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 1.192708005548819e-014 50 1.192708005548819e-014
+		 60 1.192708005548819e-014 95 1.192708005548819e-014;
 createNode animCurveTU -n "LeftHandMiddle1_CTRL_AnimDataMult";
-	rename -uid "2353A8DD-4264-A163-8EEA-B59956A4F29D";
-	setAttr ".tan" 9;
+	rename -uid "23824D04-47CB-57F1-F2C3-AE8CB20F1036";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "LeftHandMiddle2_CTRL_rotateX";
-	rename -uid "CEC80133-40D9-27E1-A91B-FD8550FD66A6";
-	setAttr ".tan" 9;
+	rename -uid "03C61EB0-4925-7BBE-AC1D-7B8581B47E2D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.5967600792331575e-015 15 -3.5967600792331575e-015
-		 20 -3.5967600792331575e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.5967600792331575e-015 50 -3.5967600792331575e-015
+		 60 -3.5967600792331575e-015;
 createNode animCurveTA -n "LeftHandMiddle2_CTRL_rotateY";
-	rename -uid "F87DFAD8-4E1F-D380-97BE-CE9DA51B5328";
-	setAttr ".tan" 9;
+	rename -uid "8129450F-451A-AA5D-9A4C-01A8D2B7A38F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.5659706925611559e-015 15 5.5659706925611559e-015
-		 20 5.5659706925611559e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 5.5659706925611559e-015 50 5.5659706925611559e-015
+		 60 5.5659706925611559e-015;
 createNode animCurveTA -n "LeftHandMiddle2_CTRL_rotateZ";
-	rename -uid "53CDF5A8-48A1-D819-A96A-3991ADE1AB82";
-	setAttr ".tan" 9;
+	rename -uid "B3C0CBD1-445A-1B89-5A3C-E2A77707FA74";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 4.3235665201144685e-015 15 4.3235665201144685e-015
-		 20 4.3235665201144685e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 4.3235665201144685e-015 50 4.3235665201144685e-015
+		 60 4.3235665201144685e-015;
 createNode animCurveTU -n "LeftHandMiddle2_CTRL_AnimDataMult";
-	rename -uid "0C67F14A-4DA3-F8CE-F2C6-068E40F061C0";
-	setAttr ".tan" 9;
+	rename -uid "6BD290C6-462B-7DB6-1D50-28A4079CE118";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandMiddle3_CTRL_rotateX";
-	rename -uid "76C838CC-44E9-B103-AC7B-A2B0631F8045";
-	setAttr ".tan" 9;
+	rename -uid "9D712617-4C06-9364-E55F-8BA8CC7F09F2";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.5594768356574176e-013 15 -2.5594768356574176e-013
-		 20 -2.5594768356574176e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.5594768356574176e-013 50 -2.5594768356574176e-013
+		 60 -2.5594768356574176e-013;
 createNode animCurveTA -n "LeftHandMiddle3_CTRL_rotateY";
-	rename -uid "9EF5A00F-4C54-9D23-C6F3-7D9A7F2FDEF5";
-	setAttr ".tan" 9;
+	rename -uid "4DCE0452-4296-16FE-DF93-26B34B3B08AF";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.9635400277440951e-015 15 -5.9635400277440951e-015
-		 20 -5.9635400277440951e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.9635400277440951e-015 50 -5.9635400277440951e-015
+		 60 -5.9635400277440951e-015;
 createNode animCurveTA -n "LeftHandMiddle3_CTRL_rotateZ";
-	rename -uid "B77E8754-45B1-C56A-9387-5DA41264302E";
-	setAttr ".tan" 9;
+	rename -uid "88BABEEA-4552-AF4E-E734-73A870FEDE1F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.9635400277440959e-016 15 -5.9635400277440959e-016
-		 20 -5.9635400277440959e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.9635400277440959e-016 50 -5.9635400277440959e-016
+		 60 -5.9635400277440959e-016;
 createNode animCurveTU -n "LeftHandMiddle3_CTRL_AnimDataMult";
-	rename -uid "6CF83C2C-47AA-B546-9E26-B5A8882CAA3F";
-	setAttr ".tan" 9;
+	rename -uid "B6A358BE-422C-6696-110F-7D9A9871D4B9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandRing1_CTRL_rotateX";
-	rename -uid "DC16F4A0-45C4-0885-FAB6-BEAEA0AD93A7";
-	setAttr ".tan" 9;
+	rename -uid "9E9B5A3C-47F9-B7A8-628A-84A387F237FF";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.8514529345847271e-014 15 3.8514529345847271e-014
-		 20 3.8514529345847271e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -33.60842385997676 50 -33.60842385997676
+		 60 -33.60842385997676 95 -33.60842385997676 99 0;
 createNode animCurveTA -n "LeftHandRing1_CTRL_rotateY";
-	rename -uid "EC91716F-4952-8174-EC9E-8D871189006B";
-	setAttr ".tan" 9;
+	rename -uid "70DC4773-4C98-AF7D-CD9D-1D888973470B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.9756933518293967e-015 15 -3.9756933518293967e-015
-		 20 -3.9756933518293967e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 -3.9756933518293967e-015 50 -3.9756933518293967e-015
+		 60 -3.9756933518293967e-015 95 -3.9756933518293967e-015;
 createNode animCurveTA -n "LeftHandRing1_CTRL_rotateZ";
-	rename -uid "CD035936-4AC1-B997-2C25-B19F152A637A";
-	setAttr ".tan" 9;
+	rename -uid "65257FA8-4625-D77D-ABFF-E0AE2FFDFAD4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTU -n "LeftHandRing1_CTRL_AnimDataMult";
-	rename -uid "51152BA0-4FA0-FA19-0A4F-8E9996DEEF14";
-	setAttr ".tan" 9;
+	rename -uid "AC024979-41B6-08FC-1837-FAB9639FC369";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "LeftHandRing2_CTRL_rotateX";
-	rename -uid "DB2B64E9-4C8A-AA4E-84C1-2F8E8D0CABFD";
-	setAttr ".tan" 9;
+	rename -uid "A20F4AF3-4C7A-5E91-490F-FCBCA1A1498D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.7625056191371795e-013 15 1.7625056191371795e-013
-		 20 1.7625056191371795e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.7625056191371795e-013 50 1.7625056191371795e-013
+		 60 1.7625056191371795e-013;
 createNode animCurveTA -n "LeftHandRing2_CTRL_rotateY";
-	rename -uid "DED0867F-421F-7D45-7479-D19CD4562602";
-	setAttr ".tan" 9;
+	rename -uid "B0C4F39E-4B72-F231-D529-EFABB58FAFEF";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.9635400277440928e-015 15 -5.9635400277440928e-015
-		 20 -5.9635400277440928e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.9635400277440928e-015 50 -5.9635400277440928e-015
+		 60 -5.9635400277440928e-015;
 createNode animCurveTA -n "LeftHandRing2_CTRL_rotateZ";
-	rename -uid "A80E6D98-490D-2339-B219-78A0DD1D401E";
-	setAttr ".tan" 9;
+	rename -uid "EC1636F4-4FC4-F759-CD81-798731371486";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -4.5968954380527381e-015 15 -4.5968954380527381e-015
-		 20 -4.5968954380527381e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -4.5968954380527381e-015 50 -4.5968954380527381e-015
+		 60 -4.5968954380527381e-015;
 createNode animCurveTU -n "LeftHandRing2_CTRL_AnimDataMult";
-	rename -uid "BBD12506-4B18-502C-6A70-5DBE03709DC7";
-	setAttr ".tan" 9;
+	rename -uid "31B818E8-444C-4603-6345-EEB1D615110E";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandRing3_CTRL_rotateX";
-	rename -uid "28DE1F9E-4448-F87D-D7F9-389F5D1DBF15";
-	setAttr ".tan" 9;
+	rename -uid "097418CF-484A-AA37-0602-718FD9E3143B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 4.468306606204508e-014 15 4.468306606204508e-014
-		 20 4.468306606204508e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 4.468306606204508e-014 50 4.468306606204508e-014
+		 60 4.468306606204508e-014;
 createNode animCurveTA -n "LeftHandRing3_CTRL_rotateY";
-	rename -uid "CE0E773F-4D7A-6DD7-4AB9-508B30C3ACE9";
-	setAttr ".tan" 9;
+	rename -uid "C3903991-4F8C-4284-9D5D-90AF7F64247D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.3611093629270351e-015 15 -6.3611093629270351e-015
-		 20 -6.3611093629270351e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.3611093629270351e-015 50 -6.3611093629270351e-015
+		 60 -6.3611093629270351e-015;
 createNode animCurveTA -n "LeftHandRing3_CTRL_rotateZ";
-	rename -uid "4DCBE95C-4247-50DC-49E9-F1AC7D7D7E14";
-	setAttr ".tan" 9;
+	rename -uid "8205C21E-42F8-A2C7-2E1A-CDA7BEDCFD6B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.9635400277440959e-016 15 -5.9635400277440959e-016
-		 20 -5.9635400277440959e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.9635400277440959e-016 50 -5.9635400277440959e-016
+		 60 -5.9635400277440959e-016;
 createNode animCurveTU -n "LeftHandRing3_CTRL_AnimDataMult";
-	rename -uid "13D091B9-46D3-648F-FDC8-0495D5D671BE";
-	setAttr ".tan" 9;
+	rename -uid "AFCFD175-410E-BC69-8BD8-BF81585154CE";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandPinky1_CTRL_rotateX";
-	rename -uid "8BCEF287-4450-6B4B-92CA-7E96ECF72BF2";
-	setAttr ".tan" 9;
+	rename -uid "B0A16AAD-48CB-2828-0443-1D95F54AEE0E";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.9138438608462268e-015 15 -5.9138438608462268e-015
-		 20 -5.9138438608462268e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -33.60842385997676 50 -33.60842385997676
+		 60 -33.60842385997676 95 -33.60842385997676 99 0;
 createNode animCurveTA -n "LeftHandPinky1_CTRL_rotateY";
-	rename -uid "91984026-4FE8-3491-E609-3F8AD3B4E33E";
-	setAttr ".tan" 9;
+	rename -uid "7CB8D38A-44F7-A6BB-2DB8-B0A3090FA6F7";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.9756933518293975e-015 15 3.9756933518293975e-015
-		 20 3.9756933518293975e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 3.9756933518293975e-015 50 3.9756933518293975e-015
+		 60 3.9756933518293975e-015 95 3.9756933518293975e-015;
 createNode animCurveTA -n "LeftHandPinky1_CTRL_rotateZ";
-	rename -uid "B0B83C30-4B9B-034B-3D50-3EBA4C7B25FA";
-	setAttr ".tan" 9;
+	rename -uid "10FA0093-4706-B0BC-929C-12B6C74AE171";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTU -n "LeftHandPinky1_CTRL_AnimDataMult";
-	rename -uid "50B8552F-41F7-8859-E235-B692B3C945D8";
-	setAttr ".tan" 9;
+	rename -uid "E2D9BBC3-41FC-454F-C319-F1B7B40DCCD0";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "LeftHandPinky2_CTRL_rotateX";
-	rename -uid "CAD3DE3A-4081-2E40-59D5-CBB5CF998B8A";
-	setAttr ".tan" 9;
+	rename -uid "36ED91E1-4E53-6C77-4636-F9880F5059B2";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.6379147174454537e-015 15 -3.6379147174454537e-015
-		 20 -3.6379147174454537e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.6379147174454537e-015 50 -3.6379147174454537e-015
+		 60 -3.6379147174454537e-015;
 createNode animCurveTA -n "LeftHandPinky2_CTRL_rotateY";
-	rename -uid "B8568F56-4352-B68F-9F14-2FB2160F98FD";
-	setAttr ".tan" 9;
+	rename -uid "ED2C17A1-4AC0-C7F2-347C-8997189220A6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.1684013573782167e-015 15 -5.1684013573782167e-015
-		 20 -5.1684013573782167e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.1684013573782167e-015 50 -5.1684013573782167e-015
+		 60 -5.1684013573782167e-015;
 createNode animCurveTA -n "LeftHandPinky2_CTRL_rotateZ";
-	rename -uid "0DEB0A77-4B93-B55F-8F57-A58B6F1DD9B0";
-	setAttr ".tan" 9;
+	rename -uid "618C2296-4176-C031-D80C-299FD7E3D8D6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.1619186188768176e-015 15 3.1619186188768176e-015
-		 20 3.1619186188768176e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 3.1619186188768176e-015 50 3.1619186188768176e-015
+		 60 3.1619186188768176e-015;
 createNode animCurveTU -n "LeftHandPinky2_CTRL_AnimDataMult";
-	rename -uid "BE299C7B-45E6-A4E6-2FDF-349B5461D8A9";
-	setAttr ".tan" 9;
+	rename -uid "B7BD5E9B-461F-DFDE-2F51-9899D79A8818";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "LeftHandPinky3_CTRL_rotateX";
-	rename -uid "D5D7AA77-4BEB-C330-D09F-DAA4456B9BEB";
-	setAttr ".tan" 9;
+	rename -uid "4E34C8D9-4E3F-E015-5257-DD92CFED0FE4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.5699130307059698e-014 15 -2.5699130307059698e-014
-		 20 -2.5699130307059698e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.5699130307059698e-014 50 -2.5699130307059698e-014
+		 60 -2.5699130307059698e-014;
 createNode animCurveTA -n "LeftHandPinky3_CTRL_rotateY";
-	rename -uid "10C8E60F-4E48-C9F5-945F-DD9E74E76BD8";
-	setAttr ".tan" 9;
+	rename -uid "8DB1B851-4F32-AFA4-9505-2B91C4E922DB";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.5781240166464568e-015 15 -3.5781240166464568e-015
-		 20 -3.5781240166464568e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.5781240166464568e-015 50 -3.5781240166464568e-015
+		 60 -3.5781240166464568e-015;
 createNode animCurveTA -n "LeftHandPinky3_CTRL_rotateZ";
-	rename -uid "79BDB75E-47BF-C7D2-CB83-5FB32B8383FB";
-	setAttr ".tan" 9;
+	rename -uid "E91CA9A7-410F-F170-FE67-C28FEFDEFB91";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 6.6592863643142393e-015 15 6.6592863643142393e-015
-		 20 6.6592863643142393e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 6.6592863643142393e-015 50 6.6592863643142393e-015
+		 60 6.6592863643142393e-015;
 createNode animCurveTU -n "LeftHandPinky3_CTRL_AnimDataMult";
-	rename -uid "5C152CC4-4904-6484-FC4A-EE8A883C824B";
-	setAttr ".tan" 9;
+	rename -uid "61C1662C-48B6-2732-E136-C7BE791C6864";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandIndex1_CTRL_rotateX";
-	rename -uid "661E773D-424F-B794-F960-DAAE3B1FA2F4";
-	setAttr ".tan" 9;
+	rename -uid "DBC2749E-4643-6C32-B7EE-79877F0AEDF9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -4.5621081212242358e-014 15 -4.5621081212242358e-014
-		 20 -4.5621081212242358e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -49.462895955450989 39 0 50 -49.462895955450989
+		 60 -49.462895955450989 95 -49.462895955450989 98 0;
 createNode animCurveTA -n "RightHandIndex1_CTRL_rotateY";
-	rename -uid "1973BF93-4E19-3EF2-880A-CAA266CF119D";
-	setAttr ".tan" 9;
+	rename -uid "1B68897F-435D-FF63-0E8A-9DBFD3A28D65";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 8.7465253740246719e-015 15 8.7465253740246719e-015
-		 20 8.7465253740246719e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 8.7465253740246719e-015 50 8.7465253740246719e-015
+		 60 8.7465253740246719e-015 95 8.7465253740246719e-015 98 8.7465253740246719e-015;
 createNode animCurveTA -n "RightHandIndex1_CTRL_rotateZ";
-	rename -uid "04670301-4700-B6AD-F950-9FA1CE12021C";
-	setAttr ".tan" 9;
+	rename -uid "798E7324-4E9B-AB68-D3F7-459831E566AB";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1131941385122312e-014 15 -1.1131941385122312e-014
-		 20 -1.1131941385122312e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -1.1131941385122312e-014 50 -1.1131941385122312e-014
+		 60 -1.1131941385122312e-014 95 -1.1131941385122312e-014 98 -1.1131941385122312e-014;
 createNode animCurveTU -n "RightHandIndex1_CTRL_AnimDataMult";
-	rename -uid "9EA1255D-4288-E099-F79E-70A023326CD8";
-	setAttr ".tan" 9;
+	rename -uid "E23B49E8-4E50-608A-7BFE-2083ED563F93";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 60 1 95 1 98 1;
 createNode animCurveTA -n "RightHandIndex2_CTRL_rotateX";
-	rename -uid "F076A8F8-4D43-382A-C5FA-BFBF4C936C88";
-	setAttr ".tan" 9;
+	rename -uid "762B8BCA-4FA5-6E73-117E-E9AC1C1D9B53";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.2801499642108318e-013 15 -1.2801499642108318e-013
-		 20 -1.2801499642108318e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.2801499642108318e-013 50 -1.2801499642108318e-013
+		 60 -1.2801499642108318e-013;
 createNode animCurveTA -n "RightHandIndex2_CTRL_rotateY";
-	rename -uid "36D3F0D9-42AB-2E88-6F31-B6B97DDCF504";
-	setAttr ".tan" 9;
+	rename -uid "69B79DBD-4A07-0EBD-43AE-8CABB3A4540A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.1805546814635176e-015 15 -3.1805546814635176e-015
-		 20 -3.1805546814635176e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.1805546814635176e-015 50 -3.1805546814635176e-015
+		 60 -3.1805546814635176e-015;
 createNode animCurveTA -n "RightHandIndex2_CTRL_rotateZ";
-	rename -uid "AB19C0E1-4B90-B40C-FC4B-4BA168FFA79C";
-	setAttr ".tan" 9;
+	rename -uid "0385F543-41C1-1705-73E4-8F8F70BC5262";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 9.4422717105948169e-016 15 9.4422717105948169e-016
-		 20 9.4422717105948169e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 9.4422717105948169e-016 50 9.4422717105948169e-016
+		 60 9.4422717105948169e-016;
 createNode animCurveTU -n "RightHandIndex2_CTRL_AnimDataMult";
-	rename -uid "A9955478-4A30-1FFF-6B3F-47A90F1F97E0";
-	setAttr ".tan" 9;
+	rename -uid "F057387C-4CC4-52C4-241F-D2A67204E961";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandIndex3_CTRL_rotateX";
-	rename -uid "9EBD273A-4B45-F773-99C6-DDAF5742A158";
-	setAttr ".tan" 9;
+	rename -uid "662B0A43-43C5-E4FD-8735-D4BF011D74A9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1703447304447787e-014 15 -1.1703447304447787e-014
-		 20 -1.1703447304447787e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.1703447304447787e-014 50 -1.1703447304447787e-014
+		 60 -1.1703447304447787e-014;
 createNode animCurveTA -n "RightHandIndex3_CTRL_rotateY";
-	rename -uid "CA29AE66-4F35-DE45-76C6-828ACB3D312F";
-	setAttr ".tan" 9;
+	rename -uid "FD10191D-4BCB-30E2-2797-82A9A9A58F7B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.0336802714756432e-014 15 1.0336802714756432e-014
-		 20 1.0336802714756432e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.0336802714756432e-014 50 1.0336802714756432e-014
+		 60 1.0336802714756432e-014;
 createNode animCurveTA -n "RightHandIndex3_CTRL_rotateZ";
-	rename -uid "EC242492-4224-03EF-A9BA-C7970407F0B2";
-	setAttr ".tan" 9;
+	rename -uid "73022795-476F-8641-F0AB-968F94B131D9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.9513867036587939e-016 15 -7.9513867036587939e-016
-		 20 -7.9513867036587939e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -7.9513867036587939e-016 50 -7.9513867036587939e-016
+		 60 -7.9513867036587939e-016;
 createNode animCurveTU -n "RightHandIndex3_CTRL_AnimDataMult";
-	rename -uid "3248DD50-4369-D29C-717D-41A3240CD754";
-	setAttr ".tan" 9;
+	rename -uid "BD368FDC-423F-6022-9893-B3BE9D8317C1";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandThumb1_CTRL_rotateX";
-	rename -uid "821CA434-432C-0AA0-7F02-199C804D5986";
-	setAttr ".tan" 9;
+	rename -uid "35FF11A3-4DF5-CCB7-0C16-0DA5F5093F19";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.4511280734177297e-014 15 -1.4511280734177297e-014
-		 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.4511280734177297e-014 50 -1.4511280734177297e-014
+		 60 -1.4511280734177297e-014;
 createNode animCurveTA -n "RightHandThumb1_CTRL_rotateY";
-	rename -uid "9E077CF5-4307-EFBE-B8E1-BB8A672F08B1";
-	setAttr ".tan" 9;
+	rename -uid "5387E71C-40C3-4583-228B-FB9321FD88B5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -3.1805546814635183e-015 15 0 30 0 42 0
-		 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.1805546814635183e-015 50 -3.1805546814635183e-015
+		 60 -3.1805546814635183e-015;
 createNode animCurveTA -n "RightHandThumb1_CTRL_rotateZ";
-	rename -uid "57E86379-46F5-D701-80BB-E7A1CC444A45";
-	setAttr ".tan" 9;
+	rename -uid "B7F358ED-41A2-CD84-3CF9-B49A6CB173FE";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.2722218725854073e-014 15 -1.2722218725854073e-014
-		 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.2722218725854073e-014 50 -1.2722218725854073e-014
+		 60 -1.2722218725854073e-014;
 createNode animCurveTU -n "RightHandThumb1_CTRL_AnimDataMult";
-	rename -uid "263B6D44-40EF-01EC-D074-BD8B0F1A47AA";
-	setAttr ".tan" 9;
+	rename -uid "0858C3DC-4396-DFBA-5F16-618807FD4B3A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 15 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandThumb2_CTRL_rotateX";
-	rename -uid "4D96796D-44E6-89E7-C63B-8F96F3447BB6";
-	setAttr ".tan" 9;
+	rename -uid "5FDAB5EE-4ED0-9D13-8282-A486EE9E456D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -9.5416640443905535e-015 15 0 30 0 42 0
-		 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -9.5416640443905535e-015 50 -9.5416640443905535e-015
+		 60 -9.5416640443905535e-015;
 createNode animCurveTA -n "RightHandThumb2_CTRL_rotateY";
-	rename -uid "D303572F-4E7D-C18B-A937-1A83126D5D51";
-	setAttr ".tan" 9;
+	rename -uid "FDA1F712-4A72-37CA-0708-08A4F8305873";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.5902773407317594e-015 15 0 30 0 42 0
-		 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.5902773407317594e-015 50 -1.5902773407317594e-015
+		 60 -1.5902773407317594e-015;
 createNode animCurveTA -n "RightHandThumb2_CTRL_rotateZ";
-	rename -uid "2F67FC6F-4C7B-DA7A-A874-B192931A28CA";
-	setAttr ".tan" 9;
+	rename -uid "D6E9A114-4B18-77DD-1D7E-39963F7DB934";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 15 0 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 50 0 60 0;
 createNode animCurveTU -n "RightHandThumb2_CTRL_AnimDataMult";
-	rename -uid "F11F9134-42C0-5712-FCDD-0CB52CEE49EC";
-	setAttr ".tan" 9;
+	rename -uid "DD2A18BD-4E53-6FD2-F86C-BB86227912F0";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 15 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandThumb3_CTRL_rotateX";
-	rename -uid "033F4758-44CB-27D6-D7BD-359CDC988C69";
-	setAttr ".tan" 9;
+	rename -uid "3A15DDC5-4872-70DE-725B-2AB0A30C2471";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.5902773407317587e-014 15 -1.5902773407317587e-014
-		 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.5902773407317587e-014 50 -1.5902773407317587e-014
+		 60 -1.5902773407317587e-014;
 createNode animCurveTA -n "RightHandThumb3_CTRL_rotateY";
-	rename -uid "2FF13D6F-443B-59E8-60E5-35A69113DB81";
-	setAttr ".tan" 9;
+	rename -uid "612C8D44-4325-455E-97A4-8B8AAB38337B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.5902773407317592e-015 15 -1.5902773407317592e-015
-		 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.5902773407317592e-015 50 -1.5902773407317592e-015
+		 60 -1.5902773407317592e-015;
 createNode animCurveTA -n "RightHandThumb3_CTRL_rotateZ";
-	rename -uid "D1A5C9A0-47D1-BDDC-B3E3-C0BD989628F5";
-	setAttr ".tan" 9;
+	rename -uid "C05D1696-4BD4-5E02-7C63-A49726419D4C";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 -1.590277340731759e-014 15 -1.590277340731759e-014
-		 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.590277340731759e-014 50 -1.590277340731759e-014
+		 60 -1.590277340731759e-014;
 createNode animCurveTU -n "RightHandThumb3_CTRL_AnimDataMult";
-	rename -uid "DF6622E8-46FF-87EF-79FC-A1A4BFF7297A";
-	setAttr ".tan" 9;
+	rename -uid "91A63D03-4E32-9E6F-ABAF-70B2CBC94C86";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 15 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandMiddle1_CTRL_rotateX";
-	rename -uid "27EEE663-435D-C291-63E7-8A8ED2BB1EE5";
-	setAttr ".tan" 9;
+	rename -uid "73856951-4846-4196-D535-26ACF8479D4C";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 9.0496719921016674e-014 15 9.0496719921016674e-014
-		 20 9.0496719921016674e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -49.462895955450989 39 0 50 -49.462895955450989
+		 60 -49.462895955450989 95 -49.462895955450989 98 0;
 createNode animCurveTA -n "RightHandMiddle1_CTRL_rotateY";
-	rename -uid "69A33E08-4B90-4E81-13B5-F79F56807699";
-	setAttr ".tan" 9;
+	rename -uid "8F9F9935-42E8-3B26-7AAF-6E88CA6DC3D6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1927080055488193e-014 15 -1.1927080055488193e-014
-		 20 -1.1927080055488193e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -1.1927080055488193e-014 50 -1.1927080055488193e-014
+		 60 -1.1927080055488193e-014 95 -1.1927080055488193e-014 98 -1.1927080055488193e-014;
 createNode animCurveTA -n "RightHandMiddle1_CTRL_rotateZ";
-	rename -uid "6437AABC-46C1-254B-36BE-DC902DE958DC";
-	setAttr ".tan" 9;
+	rename -uid "111E8089-4D21-8E84-2C23-7F9612CAF587";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.0336802714756433e-014 15 1.0336802714756433e-014
-		 20 1.0336802714756433e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 1.0336802714756433e-014 50 1.0336802714756433e-014
+		 60 1.0336802714756433e-014 95 1.0336802714756433e-014 98 1.0336802714756433e-014;
 createNode animCurveTU -n "RightHandMiddle1_CTRL_AnimDataMult";
-	rename -uid "44E28C37-4600-8AE8-DE8A-A9854706E82A";
-	setAttr ".tan" 9;
+	rename -uid "1A973333-4E0D-BE57-524D-C2A5AF5343D7";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 60 1 95 1 98 1;
 createNode animCurveTA -n "RightHandMiddle2_CTRL_rotateX";
-	rename -uid "F928DB9D-4927-7FAC-528F-32B3323F5CDD";
-	setAttr ".tan" 9;
+	rename -uid "5B3939E3-4CEF-EC6C-B87B-6C9DF7756170";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 2.0983585270538302e-013 15 2.0983585270538302e-013
-		 20 2.0983585270538302e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 2.0983585270538302e-013 50 2.0983585270538302e-013
+		 60 2.0983585270538302e-013;
 createNode animCurveTA -n "RightHandMiddle2_CTRL_rotateY";
-	rename -uid "8F4E8A3B-4DD4-BB0D-3DF0-24BBB81F5338";
-	setAttr ".tan" 9;
+	rename -uid "E388476F-4DCA-F788-717D-52AE164CE724";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.669791207768347e-014 15 -1.669791207768347e-014
-		 20 -1.669791207768347e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.669791207768347e-014 50 -1.669791207768347e-014
+		 60 -1.669791207768347e-014;
 createNode animCurveTA -n "RightHandMiddle2_CTRL_rotateZ";
-	rename -uid "25C5CC0D-4021-9062-DE9D-C78D9E31AEB4";
-	setAttr ".tan" 9;
+	rename -uid "2163A428-40BA-986B-02EC-B38DB595153A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.2617170291313017e-015 15 -6.2617170291313017e-015
-		 20 -6.2617170291313017e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.2617170291313017e-015 50 -6.2617170291313017e-015
+		 60 -6.2617170291313017e-015;
 createNode animCurveTU -n "RightHandMiddle2_CTRL_AnimDataMult";
-	rename -uid "3059C239-43BF-3628-5464-B8902725D40F";
-	setAttr ".tan" 9;
+	rename -uid "CD1828EB-4353-3FD3-C609-A79A0B7272C6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandMiddle3_CTRL_rotateX";
-	rename -uid "BDDD05C2-4A13-2B45-7DF6-8C852571C5F0";
-	setAttr ".tan" 9;
+	rename -uid "60DF18EB-4A02-8326-66BC-259B19E6FD95";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.1149779779630094e-014 15 -5.1149779779630094e-014
-		 20 -5.1149779779630094e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -5.1149779779630094e-014 50 -5.1149779779630094e-014
+		 60 -5.1149779779630094e-014;
 createNode animCurveTA -n "RightHandMiddle3_CTRL_rotateY";
-	rename -uid "7A8D1042-418B-9C3F-23B7-C98B26389314";
-	setAttr ".tan" 9;
+	rename -uid "D9A45022-4830-9FDE-2137-CB9A30DCD05A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.9513867036587968e-016 15 -7.9513867036587968e-016
-		 20 -7.9513867036587968e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -7.9513867036587968e-016 50 -7.9513867036587968e-016
+		 60 -7.9513867036587968e-016;
 createNode animCurveTA -n "RightHandMiddle3_CTRL_rotateZ";
-	rename -uid "CE28133E-457E-5E80-32FB-5F88C4CA2DD5";
-	setAttr ".tan" 9;
+	rename -uid "76595621-41CD-4163-9470-AEA1CAF0C596";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 6.5598940305185075e-015 15 6.5598940305185075e-015
-		 20 6.5598940305185075e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 6.5598940305185075e-015 50 6.5598940305185075e-015
+		 60 6.5598940305185075e-015;
 createNode animCurveTU -n "RightHandMiddle3_CTRL_AnimDataMult";
-	rename -uid "3DE0EA4F-4DFF-BD82-C91D-8C9BB70AD0A6";
-	setAttr ".tan" 9;
+	rename -uid "934C9615-4641-BAC5-0EAB-4F89240E4B04";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandRing1_CTRL_rotateX";
-	rename -uid "BA288202-4D0F-03CD-78DA-D6BF51EAE174";
-	setAttr ".tan" 9;
+	rename -uid "618209BF-47ED-57FE-E83B-068858101745";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.380559516422758e-013 15 1.380559516422758e-013
-		 20 1.380559516422758e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -49.462895955450989 39 0 50 -49.462895955450989
+		 60 -49.462895955450989 95 -49.462895955450989 98 0;
 createNode animCurveTA -n "RightHandRing1_CTRL_rotateY";
-	rename -uid "8104E192-46B2-F323-DD19-55B7E6412791";
-	setAttr ".tan" 9;
+	rename -uid "4C61B32F-4F32-C0AE-5E99-738D0188332D";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.5659706925611575e-015 15 5.5659706925611575e-015
-		 20 5.5659706925611575e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 5.5659706925611575e-015 50 5.5659706925611575e-015
+		 60 5.5659706925611575e-015 95 5.5659706925611575e-015 98 5.5659706925611575e-015;
 createNode animCurveTA -n "RightHandRing1_CTRL_rotateZ";
-	rename -uid "A0D32DC2-451B-5207-F768-E0826791A3F5";
-	setAttr ".tan" 9;
+	rename -uid "D83FDFD0-4C6D-D145-467F-50854CE5E3DA";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -1.1927080055488193e-014 15 -1.1927080055488193e-014
-		 20 -1.1927080055488193e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -1.1927080055488193e-014 50 -1.1927080055488193e-014
+		 60 -1.1927080055488193e-014 95 -1.1927080055488193e-014 98 -1.1927080055488193e-014;
 createNode animCurveTU -n "RightHandRing1_CTRL_AnimDataMult";
-	rename -uid "1E2CAF45-4708-7E21-3631-06887A988BD8";
-	setAttr ".tan" 9;
+	rename -uid "C8885E3F-4FC9-9490-2D13-A3B4A544A7D7";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 60 1 95 1 98 1;
 createNode animCurveTA -n "RightHandRing2_CTRL_rotateX";
-	rename -uid "FCB259EA-4CDA-7197-BD60-C7AC9FE3DAD1";
-	setAttr ".tan" 9;
+	rename -uid "A5EA5631-4A5A-5194-1958-168A0B0E84B9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 5.5224865465255204e-014 15 5.5224865465255204e-014
-		 20 5.5224865465255204e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 5.5224865465255204e-014 50 5.5224865465255204e-014
+		 60 5.5224865465255204e-014;
 createNode animCurveTA -n "RightHandRing2_CTRL_rotateY";
-	rename -uid "12A91FF4-4B3F-5264-FAD9-E3906BB04442";
-	setAttr ".tan" 9;
+	rename -uid "AF25FB65-41FB-FC5D-9A64-02B3B00D2C20";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 7.9513867036587959e-016 15 7.9513867036587959e-016
-		 20 7.9513867036587959e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 7.9513867036587959e-016 50 7.9513867036587959e-016
+		 60 7.9513867036587959e-016;
 createNode animCurveTA -n "RightHandRing2_CTRL_rotateZ";
-	rename -uid "3DA7A127-4A1A-686C-9FFF-BE8BECC81768";
-	setAttr ".tan" 9;
+	rename -uid "1502AF25-4681-F6F5-9D5A-0DBE7E89652A";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -3.9756933518293979e-016 15 -3.9756933518293979e-016
-		 20 -3.9756933518293979e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -3.9756933518293979e-016 50 -3.9756933518293979e-016
+		 60 -3.9756933518293979e-016;
 createNode animCurveTU -n "RightHandRing2_CTRL_AnimDataMult";
-	rename -uid "AC73D6F4-4E56-B892-D685-0C8F22F2E3F7";
-	setAttr ".tan" 9;
+	rename -uid "4CF7021B-44C6-15CB-2262-89A2D7DC9656";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandRing3_CTRL_rotateX";
-	rename -uid "520497B2-432B-D41C-656D-AAB39881C31D";
-	setAttr ".tan" 9;
+	rename -uid "36DA1BE7-4D9E-88A2-173E-6B8198067A69";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.0745553687491392e-013 15 1.0745553687491392e-013
-		 20 1.0745553687491392e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.0745553687491392e-013 50 1.0745553687491392e-013
+		 60 1.0745553687491392e-013;
 createNode animCurveTA -n "RightHandRing3_CTRL_rotateY";
-	rename -uid "462B1052-452C-0AC6-22C8-EB8726248986";
-	setAttr ".tan" 9;
+	rename -uid "D5A056D6-44EC-AC12-9F72-92BFA1B83094";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.9756933518293991e-015 15 3.9756933518293991e-015
-		 20 3.9756933518293991e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 3.9756933518293991e-015 50 3.9756933518293991e-015
+		 60 3.9756933518293991e-015;
 createNode animCurveTA -n "RightHandRing3_CTRL_rotateZ";
-	rename -uid "4CD32E76-483D-23B8-C637-15A2A5BFD0E6";
-	setAttr ".tan" 9;
+	rename -uid "1F595385-4DF2-4856-2BB4-26BD13B7B877";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.3611093629270375e-015 15 -6.3611093629270375e-015
-		 20 -6.3611093629270375e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.3611093629270375e-015 50 -6.3611093629270375e-015
+		 60 -6.3611093629270375e-015;
 createNode animCurveTU -n "RightHandRing3_CTRL_AnimDataMult";
-	rename -uid "40A82981-4043-840F-816B-75AB08B6CDD8";
-	setAttr ".tan" 9;
+	rename -uid "E1E31480-41DA-4A67-239E-238CE9391C95";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandPinky1_CTRL_rotateX";
-	rename -uid "62F3A4FE-40F3-5022-0593-E9A899B8A298";
-	setAttr ".tan" 9;
+	rename -uid "DAC4EE63-4803-CD57-DF48-0796950E37F4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.1126285284377017e-014 15 -6.1126285284377017e-014
-		 20 -6.1126285284377017e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -49.462895955450989 39 0 50 -49.462895955450989
+		 60 -49.462895955450989 95 -49.462895955450989 98 0;
 createNode animCurveTA -n "RightHandPinky1_CTRL_rotateY";
-	rename -uid "72B46E9A-495B-E06F-822E-028FD1133F91";
-	setAttr ".tan" 9;
+	rename -uid "5DF2D06A-4F3C-B785-AD73-21B5752D41D8";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.9513867036587935e-015 15 -7.9513867036587935e-015
-		 20 -7.9513867036587935e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -7.9513867036587935e-015 50 -7.9513867036587935e-015
+		 60 -7.9513867036587935e-015 95 -7.9513867036587935e-015 98 -7.9513867036587935e-015;
 createNode animCurveTA -n "RightHandPinky1_CTRL_rotateZ";
-	rename -uid "03EEE4FC-4BF7-3CCD-D25E-8D8CA626B7C3";
-	setAttr ".tan" 9;
+	rename -uid "DD849243-4A4E-A7B5-BF4A-72BD425E9D10";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.272221872585407e-014 15 1.272221872585407e-014
-		 20 1.272221872585407e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 1.272221872585407e-014 50 1.272221872585407e-014
+		 60 1.272221872585407e-014 95 1.272221872585407e-014 98 1.272221872585407e-014;
 createNode animCurveTU -n "RightHandPinky1_CTRL_AnimDataMult";
-	rename -uid "D0FC8F61-479E-9C25-4D91-C1BFE5AE7E41";
-	setAttr ".tan" 9;
+	rename -uid "E0C94AB2-4E1F-827D-CCA5-DFAC70B76697";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 60 1 95 1 98 1;
 createNode animCurveTA -n "RightHandPinky2_CTRL_rotateX";
-	rename -uid "24BC3C05-4282-56F8-749B-0C9020763C75";
-	setAttr ".tan" 9;
+	rename -uid "DE744D70-492C-6F8E-0B57-1C90B142B9C6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.6099073266564164e-013 15 1.6099073266564164e-013
-		 20 1.6099073266564164e-013 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.6099073266564164e-013 50 1.6099073266564164e-013
+		 60 1.6099073266564164e-013;
 createNode animCurveTA -n "RightHandPinky2_CTRL_rotateY";
-	rename -uid "ABD4DAF1-4C3D-87DD-1962-D588FA612F47";
-	setAttr ".tan" 9;
+	rename -uid "B8761325-4262-9777-1C27-719A4CE95ED5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.9513867036587919e-016 15 -7.9513867036587919e-016
-		 20 -7.9513867036587919e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -7.9513867036587919e-016 50 -7.9513867036587919e-016
+		 60 -7.9513867036587919e-016;
 createNode animCurveTA -n "RightHandPinky2_CTRL_rotateZ";
-	rename -uid "F1CBCD66-43D4-5075-3F34-6097EDB74558";
-	setAttr ".tan" 9;
+	rename -uid "3C712943-4D6F-7586-2A25-9CA42E25ABB0";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -7.3550327008843819e-015 15 -7.3550327008843819e-015
-		 20 -7.3550327008843819e-015 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -7.3550327008843819e-015 50 -7.3550327008843819e-015
+		 60 -7.3550327008843819e-015;
 createNode animCurveTU -n "RightHandPinky2_CTRL_AnimDataMult";
-	rename -uid "19FB2A6D-4F07-784A-5AB1-379D7D606EB0";
-	setAttr ".tan" 9;
+	rename -uid "D1830BB8-4D44-C0B9-C982-16BD2922E8A6";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTA -n "RightHandPinky3_CTRL_rotateX";
-	rename -uid "872B97C0-4BE2-63C1-83A6-0C9E06C605C6";
-	setAttr ".tan" 9;
+	rename -uid "EDB698FC-4F3A-54CA-62DA-4AAA5D44BCFA";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.2815954958904481e-014 15 -6.2815954958904481e-014
-		 20 -6.2815954958904481e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.2815954958904481e-014 50 -6.2815954958904481e-014
+		 60 -6.2815954958904481e-014;
 createNode animCurveTA -n "RightHandPinky3_CTRL_rotateY";
-	rename -uid "A4BE8599-4DE1-57B3-E712-6EA27C21C945";
-	setAttr ".tan" 9;
+	rename -uid "74969F53-475F-FC3E-505B-2DB39E0B9DE7";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.828818941841523e-014 15 1.828818941841523e-014
-		 20 1.828818941841523e-014 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.828818941841523e-014 50 1.828818941841523e-014
+		 60 1.828818941841523e-014;
 createNode animCurveTA -n "RightHandPinky3_CTRL_rotateZ";
-	rename -uid "DBEF5204-4458-1543-FB76-9EA6BF538431";
-	setAttr ".tan" 9;
+	rename -uid "AFA91BC0-41E7-3A71-F53D-27904867CE8B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.9878466759146992e-016 15 1.9878466759146992e-016
-		 20 1.9878466759146992e-016 30 0 42 0 49 0 75 0 96 0 137 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1.9878466759146992e-016 50 1.9878466759146992e-016
+		 60 1.9878466759146992e-016;
 createNode animCurveTU -n "RightHandPinky3_CTRL_AnimDataMult";
-	rename -uid "2132D41B-47E7-3AE4-ACC4-7ABED1FFBB1B";
-	setAttr ".tan" 9;
+	rename -uid "10BC3D48-45DF-64A6-4AB0-96A51E589659";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTU -n "LeftFoot_Options_FK_IK";
-	rename -uid "5EFE7B12-4A98-0458-C244-DDA69C772318";
-	setAttr ".tan" 9;
+	rename -uid "49520265-40B4-E66B-D3FB-B69F19EBBBA5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTU -n "RightFoot_Options_FK_IK";
-	rename -uid "CFD09E51-4426-C622-2B1B-BCBBC8503553";
-	setAttr ".tan" 9;
+	rename -uid "135959B7-454C-EEA8-6C54-0D9EDBCACF62";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
 createNode animCurveTU -n "LeftHand_Options_FK_IK";
-	rename -uid "7F335B3F-4493-E98F-60ED-729D3555E87C";
-	setAttr ".tan" 9;
+	rename -uid "1D4705EE-4213-7237-555E-3A9D5CBD7BDC";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 72 1 88 1 96 1 137 1 152 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "LeftHand_Options_ThumbCurl";
-	rename -uid "B129A4A0-43FF-8ED6-C156-2A944B70146E";
-	setAttr ".tan" 9;
+	rename -uid "FC44B264-47E6-9159-156E-DFBF6ACC1486";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 -10 72 -10 88 0 96 -2.5 137 -2.5 152 -10;
+	setAttr -s 9 ".ktv[0:8]"  1 -4 15 -1.5 27 -5.1801166812208823 39 0
+		 44 -1.566276809435196 50 -0.69999999999999973 60 -4 95 -4 112 -9.5;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[1:8]"  1 18 18 18 18 18 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[1:8]"  1 1 1 1 1 1 1 1;
+	setAttr -s 9 ".koy[1:8]"  0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "LeftHand_Options_IndexCurl";
-	rename -uid "66EED29D-4E5C-5336-6B15-7F991B4EA9CC";
-	setAttr ".tan" 9;
+	rename -uid "D2E5C415-4579-3B29-6724-25A9ADBA254F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 10 72 10 88 0 96 1.9000000000000001 104 2.8296297991717632
-		 111 2.4000000000000004 124 2.2500001650589923 137 2.2 152 10;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 3.8 27 1.346339325765141 39 0 50 2.5
+		 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
+	setAttr -s 10 ".kit[5:9]"  1 18 18 18 18;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 10 ".kix[5:9]"  1 1 1 0.24139860272407532 1;
+	setAttr -s 10 ".kiy[5:9]"  0 0 0 0.97042602300643921 0;
+	setAttr -s 10 ".kox[1:9]"  1 0.25449329614639282 1 1 1 1 1 0.2413986474275589 
+		1;
+	setAttr -s 10 ".koy[1:9]"  0 -0.96707451343536377 0 0 0 0 0 0.97042608261108398 
+		0;
 createNode animCurveTU -n "LeftHand_Options_MiddleCurl";
-	rename -uid "49F428AA-479E-6A8A-860A-779E138F7DCD";
-	setAttr ".tan" 9;
+	rename -uid "B1564DBE-460E-0950-92FC-A1B82C009913";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 10 72 10 88 0 96 1.9000000000000001 107 2.7122964454932998
-		 111 2.4000000000000004 124 1.6500001650589922 137 2.2 152 10;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 2.4000000000000004 27 3.3272046672488353
+		 39 0 50 2.5 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
+	setAttr -s 10 ".kit[5:9]"  1 18 18 18 18;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 10 ".kix[5:9]"  1 1 1 0.24139860272407532 1;
+	setAttr -s 10 ".kiy[5:9]"  0 0 0 0.97042602300643921 0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 0.2413986474275589 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0.97042608261108398 0;
 createNode animCurveTU -n "LeftHand_Options_RingCurl";
-	rename -uid "E95E06D1-4C95-49CC-DF1C-D4BB6584B020";
-	setAttr ".tan" 9;
+	rename -uid "C23A490C-4DB7-B36F-61E3-F2A16E2EE8A4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 10 72 10 88 0 96 1.9000000000000001 111 2.4000000000000004
-		 118 2.0629497864521582 124 1.3500001650589921 131 2.3827040129082731 137 2.2 152 10;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 1.2 27 4.5536606742348589 39 0
+		 50 2.5 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
+	setAttr -s 10 ".kit[5:9]"  1 18 18 18 18;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 10 ".kix[5:9]"  1 1 1 0.24139860272407532 1;
+	setAttr -s 10 ".kiy[5:9]"  0 0 0 0.97042602300643921 0;
+	setAttr -s 10 ".kox[1:9]"  1 1 1 1 1 1 1 0.2413986474275589 1;
+	setAttr -s 10 ".koy[1:9]"  0 0 0 0 0 0 0 0.97042608261108398 0;
 createNode animCurveTU -n "LeftHand_Options_PinkyCurl";
-	rename -uid "90FCF184-4E82-D0EE-954B-93A0A2D705D9";
-	setAttr ".tan" 9;
+	rename -uid "E3FB8376-4F43-BC04-E3EA-1D92FF20A4AB";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 10 72 10 88 0 96 1.9000000000000001 111 2.4000000000000004
-		 124 1.8500001650589921 137 2.2 152 10;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 3 27 4.8639766637558237 39 0 50 2.5
+		 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
+	setAttr -s 10 ".kit[5:9]"  1 18 18 18 18;
+	setAttr -s 10 ".kot[1:9]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 10 ".kix[5:9]"  1 1 1 0.24139860272407532 1;
+	setAttr -s 10 ".kiy[5:9]"  0 0 0 0.97042602300643921 0;
+	setAttr -s 10 ".kox[1:9]"  0.416605144739151 1 1 1 1 1 1 0.2413986474275589 
+		1;
+	setAttr -s 10 ".koy[1:9]"  0.90908753871917725 0 0 0 0 0 0 0.97042608261108398 
+		0;
 createNode animCurveTU -n "LeftHand_Options_Sway";
-	rename -uid "C8E07040-4D48-C28B-46AD-5A9FCD98BC93";
-	setAttr ".tan" 9;
+	rename -uid "54A309F2-46AE-C510-A8B4-AFB6763BE262";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 72 0 88 0 96 0 137 0 152 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[1:3]"  1 18 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "LeftHand_Options_Spread";
-	rename -uid "40E9283E-44BC-880F-31C6-E18E8B82C1CE";
-	setAttr ".tan" 9;
+	rename -uid "17A1C338-4592-1FD1-7891-57B4FB95BD00";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 72 0 88 -10 96 -10 137 -10 152 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -10 15 -5.6 50 -10 60 -10 95 -10 112 -5.4999999999999982;
+	setAttr -s 6 ".kit[3:5]"  1 18 18;
+	setAttr -s 6 ".kot[1:5]"  1 18 18 18 18;
+	setAttr -s 6 ".kix[3:5]"  1 1 1;
+	setAttr -s 6 ".kiy[3:5]"  0 0 0;
+	setAttr -s 6 ".kox[1:5]"  1 1 1 1 1;
+	setAttr -s 6 ".koy[1:5]"  0 0 0 0 0;
 createNode animCurveTU -n "RightHand_Options_FK_IK";
-	rename -uid "63F1DCFF-4082-8EAC-F100-7E842B859921";
-	setAttr ".tan" 9;
+	rename -uid "DDB81253-4DE6-0F39-9FA1-059A9FAA25C5";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1
-		 153 1 168 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTU -n "RightHand_Options_ThumbCurl";
-	rename -uid "71A96D14-48CE-8B0B-1909-E58EDEA83258";
-	setAttr ".tan" 9;
+	rename -uid "5863481B-43E1-40AF-C708-7BAE6BF28602";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 -9.6000000000000014 15 0 20 0 30 0 42 -5.3000000000000007
-		 49 -5.3000000000000007 75 -5.3000000000000007 96 -5.3000000000000007 137 -5.3000000000000007
-		 147 0 153 0 168 -9.6000000000000014;
+	setAttr -s 9 ".ktv[0:8]"  1 -4 15 -1.5 27 -5.1801166812208823 39 0
+		 44 -1.566276809435196 50 -0.69999999999999973 60 -4 95 -4 112 -9.5;
 createNode animCurveTU -n "RightHand_Options_IndexCurl";
-	rename -uid "DB8F3D72-4DE5-9B3D-0389-D0870E69F8CD";
-	setAttr ".tan" 9;
+	rename -uid "3EE83524-4B83-8ABA-5287-B5AF520FEE71";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 9.1000000000000014 15 0 20 1.7000000000000002
-		 25 -1 30 0 42 3.2 49 3.2 75 3.2 96 3.2 137 3.2 147 0 153 0 168 9.1000000000000014;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 3.8 27 1.346339325765141 39 0 50 2.5
+		 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
 createNode animCurveTU -n "RightHand_Options_MiddleCurl";
-	rename -uid "2DB8C016-495A-1366-09E9-A59EC4A8629F";
-	setAttr ".tan" 9;
+	rename -uid "CAB64222-4BEC-0948-B517-FC9025DDCD55";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 9.1000000000000014 15 0 20 1.7000000000000002
-		 25 -1 30 0 42 3.2 49 3.2 75 3.2 96 3.2 137 3.2 147 0 153 0 168 9.1000000000000014;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 2.4000000000000004 27 3.3272046672488353
+		 39 0 50 2.5 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
 createNode animCurveTU -n "RightHand_Options_RingCurl";
-	rename -uid "7AF56CED-453D-43F5-B710-448D0914F6AF";
-	setAttr ".tan" 9;
+	rename -uid "993036EC-4395-B284-3744-92A13F1AE47B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 9.1000000000000014 15 0 20 1.7000000000000002
-		 25 -1 30 0 42 3.2 49 3.2 75 3.2 96 3.2 137 3.2 147 0 153 0 168 9.1000000000000014;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 1.2 27 4.5536606742348589 39 0
+		 50 2.5 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
 createNode animCurveTU -n "RightHand_Options_PinkyCurl";
-	rename -uid "F8A4B8AB-491B-EAE5-E5E0-7CAC3F74D833";
-	setAttr ".tan" 9;
+	rename -uid "7F3F9841-4DBD-0F64-FDCE-55A1888EAD2C";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 9.1000000000000014 15 0 20 1.7000000000000002
-		 25 -1 30 0 42 3.2 49 3.2 75 3.2 96 3.2 137 3.2 147 0 153 0 168 9.1000000000000014;
+	setAttr -s 10 ".ktv[0:9]"  1 2.5 15 3 27 4.8639766637558237 39 0 50 2.5
+		 60 2.5 70 3.7 81 1.7074816162421902 95 2.5 112 6.9;
 createNode animCurveTU -n "RightHand_Options_Sway";
-	rename -uid "1A31B8DF-416B-6FE9-FF0A-638FF702BACB";
-	setAttr ".tan" 9;
+	rename -uid "1CA44E7C-4612-B11C-1189-518391D2DE15";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0
-		 153 0 168 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTU -n "RightHand_Options_Spread";
-	rename -uid "EDCE956A-492B-62AA-A61A-36AEE2E09EC2";
-	setAttr ".tan" 9;
+	rename -uid "B6A0AA51-4A59-9772-5626-1EBD1008B463";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -8.4 15 -10 20 -10 30 -10 42 -10 49 -10
-		 75 -10 96 -10 137 -10 153 -10 168 -8.4;
+	setAttr -s 6 ".ktv[0:5]"  1 -10 15 -5.6 50 -10 60 -10 95 -10 112 -5.4999999999999982;
 createNode animCurveTA -n "Root_CTRL_rotateX";
-	rename -uid "678B6797-48AE-AF99-684C-E885D4877E80";
-	setAttr ".tan" 9;
+	rename -uid "E9777E36-4637-AF01-1B73-82BAC357F0F9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -29.245056802765252 20 -29.87169150934119
-		 30 23.726095862499765 42 8.178957091052558 56 3.7654101843875867 75 -4.0308181776568386
-		 96 -4.0308181776568386 137 -4.0308181776568386 168 -3.6900353549148481;
+	setAttr -s 7 ".ktv[0:6]"  1 -7.6623184749279956 50 -17.21617656373391
+		 57 -1.9729386820368187 60 -0.87151301363252742 76 0.89970902698288846 94 3.1990354996588097
+		 120 -7.6623184749279956;
+	setAttr -s 7 ".kit[6]"  1;
+	setAttr -s 7 ".kot[6]"  1;
+	setAttr -s 7 ".kix[6]"  1;
+	setAttr -s 7 ".kiy[6]"  0;
+	setAttr -s 7 ".kox[6]"  1;
+	setAttr -s 7 ".koy[6]"  0;
 createNode animCurveTA -n "Root_CTRL_rotateY";
-	rename -uid "FADAE0D5-425F-2FAD-CDC7-06BEA7F15324";
-	setAttr ".tan" 9;
+	rename -uid "E383C94B-43BF-F776-9509-82AE01C344E4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 20 -7.1495724343638596 30 4.96141477334871
-		 42 12.525535486535082 56 15.099248001009389 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Root_CTRL_rotateZ";
-	rename -uid "1BAC0C39-4EB5-41E3-F624-918705FC1AA9";
-	setAttr ".tan" 9;
+	rename -uid "01EDDC3D-4B93-2E4C-AFA3-668B78EABE9B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 20 2.4369165930282044 30 2.1768323820378916
-		 42 -0.73508019152746928 56 -0.97133385484622814 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTU -n "Root_CTRL_AnimDataMult";
-	rename -uid "6BF2FB7B-4ED9-437C-7BDE-34B703118F41";
-	setAttr ".tan" 9;
+	rename -uid "6873F054-49C4-5DE7-B9F2-E79AD3473A49";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 20 1 30 1 42 1 56 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 57 1 60 1 120 1;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTU -n "Root_CTRL_AnimDataMultTrans";
-	rename -uid "1E5E6BEA-481C-BC9F-C892-FB8ED819E978";
-	setAttr ".tan" 9;
+	rename -uid "8CEE5C71-4074-657E-C257-EA9B5448697C";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 20 1 30 1 42 1 56 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 57 1 60 1 120 1;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine_CTRL_rotateX";
-	rename -uid "9D273A2E-4C1D-DD00-A971-F8BAE94F8842";
-	setAttr ".tan" 9;
+	rename -uid "79365B33-4D62-D931-8059-F584F6930EAA";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 11.544449156304363 20 3.4016386393654776
-		 30 12.99265790816728 42 10.527704313358736 56 2.053939216397362 75 15.819914211627394
-		 96 15.819914211627394 137 15.819914211627394 168 4.5234099212059409;
+	setAttr -s 7 ".ktv[0:6]"  1 9.1205643037652635 50 -0.43329378504063937
+		 57 14.809944096656475 60 15.911369765060766 76 17.682591805676186 94 19.981918278352104
+		 120 9.1205643037652635;
+	setAttr -s 7 ".kit[6]"  1;
+	setAttr -s 7 ".kot[6]"  1;
+	setAttr -s 7 ".kix[6]"  1;
+	setAttr -s 7 ".kiy[6]"  0;
+	setAttr -s 7 ".kox[6]"  1;
+	setAttr -s 7 ".koy[6]"  0;
 createNode animCurveTA -n "Spine_CTRL_rotateY";
-	rename -uid "76D43D4C-4597-7D58-CDC5-0EB7A606D624";
-	setAttr ".tan" 9;
+	rename -uid "6E41BBB7-4E7C-CD08-7ACF-41A71E8F54B4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -1.9412565194479472e-019 20 -12.393612330617595
-		 30 5.278977146894384 42 12.168242796775731 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -1.9412565194479472e-019 50 -1.9412565194479472e-019
+		 57 0 60 -1.2786594070437835e-021 120 -1.9412565194479472e-019;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine_CTRL_rotateZ";
-	rename -uid "354163DF-4A59-6BE3-A536-63A0FD7AA187";
-	setAttr ".tan" 9;
+	rename -uid "78E4F3B5-4B3C-1453-69E7-AEB0D75DDF06";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 1.0322024899502132e-017 20 -1.0086427662355102
-		 30 1.2161301621491023 42 -3.0818611501693027 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 1.0322024899502132e-017 50 1.0322024899502132e-017
+		 57 0 60 6.7988718158906173e-020 120 1.0322024899502132e-017;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTU -n "Spine_CTRL_AnimDataMult";
-	rename -uid "4336F2E0-44C8-5660-D463-52880292B040";
-	setAttr ".tan" 9;
+	rename -uid "5F833E3F-421F-44C1-2A7B-0E8825A667D4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 1 20 1 30 1 42 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 57 1 60 1 120 1;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine1_CTRL_rotateX";
-	rename -uid "9A84801D-4E34-C97A-742F-38AC9C2A3F1E";
-	setAttr ".tan" 9;
+	rename -uid "6410A4A4-4727-7CCA-2270-B2933EB6F8B2";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 11.544449156304363 20 3.4016386393654776
-		 30 12.99265790816728 42 10.527704313358736 56 2.053939216397362 75 15.819914211627394
-		 96 15.819914211627394 137 15.819914211627394 168 4.5234099212059409;
+	setAttr -s 7 ".ktv[0:6]"  1 9.1205643037652635 50 -0.43329378504063937
+		 57 14.809944096656475 60 15.911369765060766 76 17.682591805676186 94 19.981918278352104
+		 120 9.1205643037652635;
+	setAttr -s 7 ".kit[6]"  1;
+	setAttr -s 7 ".kot[6]"  1;
+	setAttr -s 7 ".kix[6]"  1;
+	setAttr -s 7 ".kiy[6]"  0;
+	setAttr -s 7 ".kox[6]"  1;
+	setAttr -s 7 ".koy[6]"  0;
 createNode animCurveTA -n "Spine1_CTRL_rotateY";
-	rename -uid "48F0BF69-4852-BEEA-6626-AC97D783F735";
-	setAttr ".tan" 9;
+	rename -uid "0F6650F8-417E-7D7D-5D63-E2AAA588211B";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 20 -12.393612330617595 30 5.278977146894384
-		 42 12.168242796775731 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine1_CTRL_rotateZ";
-	rename -uid "75FD5136-4E9B-2EEE-F944-92A18F459AA4";
-	setAttr ".tan" 9;
+	rename -uid "23C87749-4D02-9FB5-D453-528B5470F174";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 20 -1.0086427662355102 30 1.2161301621491023
-		 42 -3.0818611501693027 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTU -n "Spine1_CTRL_AnimDataMult";
-	rename -uid "57C72582-475C-6102-DAA4-F6844EB2FDBA";
-	setAttr ".tan" 9;
+	rename -uid "F620DAEF-45EB-006B-6B16-78AB75E03967";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 1 20 1 30 1 42 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 57 1 60 1 120 1;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine2_CTRL_rotateX";
-	rename -uid "F2514B5F-48F6-2D6F-A933-E5AE97928144";
-	setAttr ".tan" 9;
+	rename -uid "36EC8F05-4583-B142-7A75-80B037252905";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 11.544449156304363 20 3.4016386393654776
-		 25 8.7591160138301323 30 12.99265790816728 42 10.527704313358736 56 2.053939216397362
-		 75 15.819914211627394 96 15.819914211627394 137 15.819914211627394 168 4.5234099212059409;
+	setAttr -s 7 ".ktv[0:6]"  1 9.1205643037652635 50 -0.43329378504063937
+		 57 14.809944096656475 60 15.911369765060766 76 17.682591805676186 94 19.981918278352104
+		 120 9.1205643037652635;
+	setAttr -s 7 ".kit[6]"  1;
+	setAttr -s 7 ".kot[6]"  1;
+	setAttr -s 7 ".kix[6]"  1;
+	setAttr -s 7 ".kiy[6]"  0;
+	setAttr -s 7 ".kox[6]"  1;
+	setAttr -s 7 ".koy[6]"  0;
 createNode animCurveTA -n "Spine2_CTRL_rotateY";
-	rename -uid "4BA0F9EE-412F-E1D4-0FD9-07B4E6119D6D";
-	setAttr ".tan" 9;
+	rename -uid "165A3FDC-42B6-1B57-7981-8DABBADFCA41";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 20 -12.393612330617595 25 -21.124539918527887
-		 30 5.278977146894384 42 12.168242796775731 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Spine2_CTRL_rotateZ";
-	rename -uid "0CBF565F-45E4-7CAD-54A3-1CA787310E28";
-	setAttr ".tan" 9;
+	rename -uid "A4D70B1A-4CE7-15EF-835A-FE9736941998";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 20 -1.0086427662355102 25 -2.3620260589935187
-		 30 1.2161301621491023 42 -3.0818611501693027 75 0 96 0 137 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 50 0 57 0 60 0 120 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTU -n "Spine2_CTRL_AnimDataMult";
-	rename -uid "388A7380-4614-A968-F8F2-6AA9323B687E";
-	setAttr ".tan" 9;
+	rename -uid "8BC50443-4D7E-E71A-EF67-0687E64E97F0";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 1 20 1 30 1 42 1 75 1 96 1 137 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 50 1 57 1 60 1 120 1;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
 createNode animCurveTA -n "Neck_CTRL_rotateX";
-	rename -uid "4544E9DD-4F62-21A6-FDB4-2395C982CCAD";
-	setAttr ".tan" 9;
+	rename -uid "0338BAB4-4180-C0BC-79B4-3F846F61AFE4";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -7.494849904313365 20 -11.93578866906412
-		 30 -12.67233753764202 42 2.3648308290666535 49 4.8277042660592828 75 6.6704176924613119
-		 96 6.6704176924613119 137 6.6704176924613119 155 18.484242750279531 175 -12.825198749194573;
+	setAttr -s 6 ".ktv[0:5]"  1 0 50 10.346660809742124 60 -13.418088700011781
+		 75 -18.415878407839422 95 -18.415878407839422 120 -4.9139699307643179;
 createNode animCurveTA -n "Neck_CTRL_rotateY";
-	rename -uid "717F2D26-49E7-F17E-39CA-3D8D257897DD";
-	setAttr ".tan" 9;
+	rename -uid "69EE86E9-4115-0B08-2C10-6F8C17966FF9";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 20 14.024311098890568 30 -10.004383373782353
-		 42 -10.474366653408525 49 -12.05710538511866 75 0 96 0 137 0 175 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTA -n "Neck_CTRL_rotateZ";
-	rename -uid "FD099AAC-49D4-4F0B-7979-C5A52A38F555";
-	setAttr ".tan" 9;
+	rename -uid "33593C4C-4F6D-5381-3141-46B4F2F25A86";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 20 -4.8877439425270381 30 2.0570734749918596
-		 42 2.2489582345842494 49 5.558980084825512 75 0 96 0 137 0 175 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTU -n "Neck_CTRL_AnimDataMult";
-	rename -uid "877E7DFD-41D0-778B-90AF-E68478B1676D";
-	setAttr ".tan" 9;
+	rename -uid "AEBC8DA5-42F1-2615-110B-0C97EB626C8F";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1
-		 175 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "Head_CTRL_rotateX";
-	rename -uid "D1D7C95C-474B-522D-8F12-CEBA83AE0E34";
-	setAttr ".tan" 9;
+	rename -uid "9DBF41AA-44CB-BE42-F211-7582D2C91D72";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 12.847076792262255 10 21.268586587147222
-		 20 19.140791619296177 30 -12.67233753764202 42 2.3648308290666535 49 7.9142896871213395
-		 75 -15.051684408406725 96 -15.051684408406725 137 -15.051684408406725 155 -3.2378593505885678
-		 175 7.5167279473810744;
+	setAttr -s 6 ".ktv[0:5]"  1 11.511638434095703 50 9.6354216789348222
+		 60 -14.129327830819065 75 -19.127117538646697 95 -19.127117538646697 120 -5.6252090615715815;
 createNode animCurveTA -n "Head_CTRL_rotateY";
-	rename -uid "64E7AFF5-4DC4-0413-47A7-D6B32D622575";
-	setAttr ".tan" 9;
+	rename -uid "04F52162-4BEC-2C78-1C60-4BAACB70E2D1";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 20 14.54348514586272 30 -10.004383373782353
-		 42 -10.474366653408525 49 0.29811433876927579 75 0 96 0 137 0 175 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTA -n "Head_CTRL_rotateZ";
-	rename -uid "5C35E80B-4443-A97B-574D-889814BFE812";
-	setAttr ".tan" 9;
+	rename -uid "1087EEE6-4D45-84AF-CB3B-D185DF47B756";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 20 2.9611306652003915 30 2.0570734749918596
-		 42 2.2489582345842494 49 6.5812572702242154 75 0 96 0 137 0 175 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
 createNode animCurveTU -n "Head_CTRL_AnimDataMult";
-	rename -uid "BEC46A56-4F8B-FE52-4A5D-989F1D3A5463";
-	setAttr ".tan" 9;
+	rename -uid "CF3336DB-4268-7157-052C-859D1E861099";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1
-		 175 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTU -n "Head_CTRL_InheritRotation";
-	rename -uid "ADE26B8C-489F-E44F-75D0-62B760349568";
-	setAttr ".tan" 9;
+	rename -uid "E5DBFF4A-47EA-2290-B785-018C15833BBB";
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1
-		 175 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateX";
-	rename -uid "06BD6895-4743-20F5-3872-3D87292509D0";
+	rename -uid "FC570A63-45BF-2E6F-9398-DEBEFAD444C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 2.1566389302806975e-013 15 -19.147099754962582
-		 20 -19.147099754962582 30 -19.147099754962582 42 -19.147099754962582 49 -19.147099754962582
-		 75 -19.147099754962582 96 -19.147099754962582 114 -32.400877459169877 137 -19.147099754962582;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 1 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 1 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
+	setAttr -s 3 ".ktv[0:2]"  1 2.1566389302806975e-013 50 2.1566389302806975e-013
+		 60 2.1566389302806975e-013;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateY";
-	rename -uid "62431C85-4BFA-6868-0294-6A89AE8F66A8";
+	rename -uid "FD81D0B1-46D7-76A6-90B1-0C9241F64A6C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 4.2614463114921349e-015 15 5.7657952472478957
-		 20 5.7657952472478957 30 5.7657952472478957 42 5.7657952472478957 49 5.7657952472478957
-		 75 5.7657952472478957 96 5.7657952472478957 137 5.7657952472478957;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 0 0 0 0 0 0;
+	setAttr -s 3 ".ktv[0:2]"  1 4.2614463114921349e-015 50 4.2614463114921349e-015
+		 60 4.2614463114921349e-015;
 createNode animCurveTA -n "LeftShoulder_CTRL_rotateZ";
-	rename -uid "113F0500-47F5-0BB6-096F-1595D4BE7BE9";
+	rename -uid "BB9A959A-43F0-C158-1EED-F488140D2C70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1.1728295387896722e-014 15 16.137719502923691
-		 20 16.137719502923691 30 16.137719502923691 42 16.137719502923691 49 16.137719502923691
-		 75 16.137719502923691 96 16.137719502923691 137 16.137719502923691;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 0 0 0 0 0 0;
+	setAttr -s 4 ".ktv[0:3]"  1 16.775880265968045 50 -11.782532052738182
+		 60 19.210762885359195 120 0;
 createNode animCurveTU -n "LeftShoulder_CTRL_AnimDataMult";
-	rename -uid "8D04017F-41DE-1868-319C-12B3743D978A";
+	rename -uid "253295E5-414C-F812-89C8-DA84BFE9254E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 0 0 0 0 0 0;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
+createNode animCurveTA -n "RightShoulder_CTRL_rotateX";
+	rename -uid "E2D2BE89-486A-142C-734C-B0A99CBE8EB2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.3201786736418491e-013 50 -1.3201786736418491e-013
+		 60 -1.3201786736418491e-013;
+createNode animCurveTA -n "RightShoulder_CTRL_rotateY";
+	rename -uid "E55FF843-4AEA-F8A4-DAAB-C9B1205EE252";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 -4.7708320221952767e-015 50 -4.7708320221952767e-015
+		 60 -4.7708320221952767e-015;
+createNode animCurveTA -n "RightShoulder_CTRL_rotateZ";
+	rename -uid "F5F106A4-43A2-0414-1BAA-3EB5A00DBB0B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 -11.164296052287305 50 23.15019148036259
+		 60 -10.030948459467327 120 0;
+createNode animCurveTU -n "RightShoulder_CTRL_AnimDataMult";
+	rename -uid "E7B38BEE-4C88-DD70-B1B7-A084C8F3F09F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 1 50 1 60 1;
+createNode animCurveTU -n "LeftForeArm_IK_CTRL_AnimDataMult";
+	rename -uid "608D4D33-474F-7BA0-CA34-C29DC68ADE17";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
+createNode animCurveTU -n "LeftForeArm_IK_CTRL_FollowBody";
+	rename -uid "59BA26E0-4429-3EA3-3B83-43A2E693F08E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "LeftForeArm_IK_CTRL_ParentToGlobal";
+	rename -uid "6BB8523D-4CF6-30D5-32B0-0DBCB5D515D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "LeftForeArm_IK_CTRL_FollowHand";
+	rename -uid "9077C974-4389-E641-CA3A-9F98FC08AC9D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "LeftForeArm_IK_CTRL_GuideCurve1";
+	rename -uid "EBDEF72E-4C0A-17E9-8D79-618019249E68";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
+createNode animCurveTA -n "LeftHand_IK_CTRL_rotateX";
+	rename -uid "FC699506-4A72-1E7A-5BCE-FDB812780A08";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 80.868683535540072 50 -31.760796087901365
+		 60 -42.111255396057707 83 -31.48817931495444 93 -31.48817931495444 104 52.407441693926366
+		 120 84.368465749873423;
+createNode animCurveTA -n "LeftHand_IK_CTRL_rotateY";
+	rename -uid "55367B2E-4C87-12CD-82D4-03BD7B54E0B0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 -70.085023586836613 50 -44.981385082056164
+		 60 -10.362590089854214 93 -10.362590089854214 104 -19.620591503655888 120 -35.887893214067084;
+createNode animCurveTA -n "LeftHand_IK_CTRL_rotateZ";
+	rename -uid "A572EFBD-4C55-45F7-B4E5-179BD23AA3D4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 49.208140912566662 50 81.137548989925989
+		 60 94.102210480731912 93 94.102210480731912 104 59.385775052732939 120 -1.6147264783381994;
+createNode animCurveTU -n "LeftHand_IK_CTRL_AnimDataMult";
+	rename -uid "8C7C1FC5-42C2-E866-CA80-ACA8B1FFE7B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 1 50 1 60 1 93 1 104 1 120 1;
+createNode animCurveTU -n "LeftHand_IK_CTRL_FollowBody";
+	rename -uid "08315D20-468A-4F61-B01D-E2AC512B17C4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 50 0 60 0 93 0 104 0 120 0;
+createNode animCurveTU -n "LeftHand_IK_CTRL_ParentToGlobal";
+	rename -uid "B2DBF84F-4F57-68C7-9112-778D23E6BF9C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 50 0 60 0 93 0 104 0 120 0;
+createNode animCurveTU -n "RightForeArm_IK_CTRL_AnimDataMult";
+	rename -uid "928ACD21-4743-CA81-08A1-88B445FDBB80";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
+createNode animCurveTU -n "RightForeArm_IK_CTRL_FollowBody";
+	rename -uid "F2D0D6CD-4DF1-4D93-E5A8-F1AEAB7CD035";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "RightForeArm_IK_CTRL_ParentToGlobal";
+	rename -uid "F682D5D2-4982-B8D2-012F-79B32E6A7270";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "RightForeArm_IK_CTRL_FollowHand";
+	rename -uid "9C82AF9F-45CB-EF81-D012-8CB4E14EE775";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 95 0;
+createNode animCurveTU -n "RightForeArm_IK_CTRL_GuideCurve1";
+	rename -uid "3EA9528F-456F-C254-51BB-DA90E4259A1C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 95 1;
+createNode animCurveTA -n "RightHand_IK_CTRL_rotateX";
+	rename -uid "558E4811-4D37-7921-5584-1087A47CF59E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 8 ".ktv[0:7]"  1 89.514608656920515 50 -26.478892546537914
+		 60 -46.58408600926159 83 -35.961009928158347 93 -35.961009928158347 104 23.712036987046641
+		 111 43.190364130379912 120 85.325220349121665;
+createNode animCurveTA -n "RightHand_IK_CTRL_rotateY";
+	rename -uid "00D34A39-4F62-9D9A-87E2-E796AA5B6246";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 74.241274649575018 50 58.701855333762083
+		 60 10.867390764574356 93 10.867390764574356 104 35.697838236610323 111 54.303985252329035
+		 120 33.930327017380257;
+createNode animCurveTA -n "RightHand_IK_CTRL_rotateZ";
+	rename -uid "EA62C9FE-4A2F-454D-8697-CEB859305D5A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 7 ".ktv[0:6]"  1 -38.301463274414331 50 -72.122667760919384
+		 60 -95.720771974254447 93 -95.720771974254447 104 -67.33441728837559 111 -56.360222029125367
+		 120 -5.3254224341079235;
+createNode animCurveTU -n "RightHand_IK_CTRL_AnimDataMult";
+	rename -uid "435856AC-4B47-162B-961A-07BF4B146145";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 1 50 1 60 1 93 1 104 1 120 1;
+createNode animCurveTU -n "RightHand_IK_CTRL_FollowBody";
+	rename -uid "B7BE0179-4600-D583-9A88-C88B3D348AF0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 50 0 60 0 93 0 104 0 120 0;
+createNode animCurveTU -n "RightHand_IK_CTRL_ParentToGlobal";
+	rename -uid "9A418011-4691-54D6-8A6B-FF973102B0D5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 50 0 60 0 93 0 104 0 120 0;
+createNode animCurveTU -n "LeftLeg_IK_CTRL_AnimDataMult";
+	rename -uid "2A8C7E53-4137-25F2-AF2E-F38F3BD50576";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftLeg_IK_CTRL_FollowBody";
+	rename -uid "9B11BE3B-4AD6-E0AC-EF52-2B83ED9AA722";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftLeg_IK_CTRL_ParentToGlobal";
+	rename -uid "3312A6E0-4E09-8EFD-479A-DAAA5030152B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftLeg_IK_CTRL_FollowFoot";
+	rename -uid "31C07851-4556-9C71-C3B6-6DA6B9C424BA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftLeg_IK_CTRL_GuideCurve1";
+	rename -uid "24AC61C8-4452-9B93-9811-6FB7F9373A62";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateX";
+	rename -uid "D619E186-4ED0-E873-0619-4FBDBD45A7BC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 52.818175380747306 50 27.68161495842957
+		 60 52.818175380747306 78 74.50885957503138 120 52.818175380747306;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
+createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateY";
+	rename -uid "6CA98156-45F5-79E1-8CEC-17AD671B7732";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 6.1262948742196315 50 6.1262948742196315
+		 60 6.1262948742196315 120 6.1262948742196315;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateZ";
+	rename -uid "C903D153-4022-94B8-9FEF-7F94D0F32351";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 4.3235195310296746 50 4.3235195310296746
+		 60 4.3235195310296746 120 4.3235195310296746;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_AnimDataMult";
+	rename -uid "2691B277-4DC6-FAE6-3B58-BDBB8997B37E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_FollowBody";
+	rename -uid "4EF43B48-456E-35DF-35A9-A6991206B4C1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ParentToGlobal";
+	rename -uid "C1FA8915-469F-FD4A-361E-CA8CD5A6867A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_FootRoll";
+	rename -uid "0961DEF5-496E-A1FB-BA95-0794C37DDD27";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeTap";
+	rename -uid "9220C3B0-418E-512D-41CC-CD89F1E30D30";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeSideToSide";
+	rename -uid "C6B20555-4886-AAE2-B276-3E8C8031E695";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeRotate";
+	rename -uid "1A10BB5C-4B40-9482-0E4F-4DA1D440832C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeRoll";
+	rename -uid "4BA01362-4578-BB21-0083-F5AE6ECAB38C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_HipPivot";
+	rename -uid "620CB12C-4C82-A01A-9C7F-358BFB72E534";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_BallPivot";
+	rename -uid "2A17C252-4923-3BE9-B2A4-A8BA22C0E674";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_ToePivot";
+	rename -uid "A66719DF-4B6A-97B9-DCDA-61A03C911491";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_HipSideToSide";
+	rename -uid "6637102A-464C-BC0D-B98F-5F88A430E9D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "LeftFoot_IK_CTRL_HipBackToFront";
+	rename -uid "819BCAC2-4F27-D8DD-C633-B89676211F3A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightLeg_IK_CTRL_AnimDataMult";
+	rename -uid "553B9F2E-461E-2C38-A7C6-1195052A3C44";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightLeg_IK_CTRL_FollowBody";
+	rename -uid "E30BC1E9-46F7-9AE7-73F0-E6B073696DFB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightLeg_IK_CTRL_ParentToGlobal";
+	rename -uid "D838F5E7-4B9E-956A-90AD-7B82257F77FB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightLeg_IK_CTRL_FollowFoot";
+	rename -uid "0D0B5637-48B4-E241-5C7B-F68F36AAB956";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightLeg_IK_CTRL_GuideCurve1";
+	rename -uid "B4E3038F-4F68-BECA-CE50-FF9DE936E762";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTA -n "RightFoot_IK_CTRL_rotateX";
+	rename -uid "C9EB6A03-4C81-98F1-469E-65835BC04C7C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  1 52.072245962777828 50 26.935685540460227
+		 60 52.072245962777828 78 73.762930157061874 120 52.072245962777828;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[4]"  1;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[4]"  1;
+	setAttr -s 5 ".koy[4]"  0;
+createNode animCurveTA -n "RightFoot_IK_CTRL_rotateY";
+	rename -uid "F0CBBC79-4F39-78F1-F42E-75AB9E2E86B0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 -7.8519943698630585e-015 50 -7.8519943698630585e-015
+		 60 -7.8519943698630585e-015 120 -7.8519943698630585e-015;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTA -n "RightFoot_IK_CTRL_rotateZ";
+	rename -uid "33BDCD6D-48DF-0020-0FA1-CCBFCD0811CB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 -6.1623246953355651e-015 50 -6.1623246953355651e-015
+		 60 -6.1623246953355651e-015 120 -6.1623246953355651e-015;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_AnimDataMult";
+	rename -uid "E1F1573B-4847-DB22-5964-58ABA1F4C20C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 1 50 1 60 1 120 1;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_FollowBody";
+	rename -uid "CDF68039-4B6F-8876-A314-D2B41C2433FF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ParentToGlobal";
+	rename -uid "AFF1EF07-40C9-3501-983C-9EA687F921F2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_FootRoll";
+	rename -uid "358A7AEB-4D8C-396E-427B-E69E3E03ECBE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ToeTap";
+	rename -uid "CEF4BBC0-483E-34AF-17AE-B1980BCDD545";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ToeSideToSide";
+	rename -uid "DDAFE902-484B-C7A4-7280-7692FB61B390";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ToeRotate";
+	rename -uid "AA1A02D1-4891-718F-8360-E8AA022F1DB1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ToeRoll";
+	rename -uid "E1BEE348-4ABF-6B89-BA9F-1CB9CDBD54B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_HipPivot";
+	rename -uid "682B45F7-491E-52CB-BE78-0BA3B7AC67FF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_BallPivot";
+	rename -uid "E510B756-4391-CDBF-AD37-1EA76DC6C1B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_ToePivot";
+	rename -uid "A10C2BDC-4E93-058D-36EA-5FAECBAE8379";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_HipSideToSide";
+	rename -uid "AB50B433-47EF-8940-5BF5-ADB19721B5FA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
+createNode animCurveTU -n "RightFoot_IK_CTRL_HipBackToFront";
+	rename -uid "58990A19-4BDC-659B-FBDD-6086CCADEB70";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  1 0 50 0 60 0 120 0;
+	setAttr -s 4 ".kit[3]"  1;
+	setAttr -s 4 ".kot[3]"  1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 createNode animCurveTA -n "LeftArm_FK_CTRL_rotateX";
-	rename -uid "37B0F6FC-41DA-BD04-EAA6-B0BAB67F9407";
+	rename -uid "13696552-473E-7E0E-7BFE-C4A249381515";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.7890620083232284e-015;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "LeftArm_FK_CTRL_rotateY";
-	rename -uid "5FFA710F-44A9-1476-9FF8-CE992FB6BE2D";
+	rename -uid "59E37F7D-42C6-5CF7-C251-6BBC2371844B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 3.1805546814635168e-015;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "LeftArm_FK_CTRL_rotateZ";
-	rename -uid "BA5792A7-4818-0B21-141A-19A891A637D8";
+	rename -uid "D31D6397-406A-D8A0-3AC7-5F82A06DCEA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.1927080055488188e-015;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTU -n "LeftArm_FK_CTRL_AnimDataMult";
-	rename -uid "D53AAB82-4F81-D320-3207-F98649CF281A";
+	rename -uid "29CEDB03-4E22-2491-9E3E-E9BC3049FF5A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTA -n "LeftForeArm_FK_CTRL_rotateX";
-	rename -uid "97C82F27-4679-C9A6-D98B-FC9C5A2B5C8A";
+	rename -uid "D51901D4-4B93-F2A5-F717-C6B5B16A858E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 -2.4102640945465702e-014;
 createNode animCurveTA -n "LeftForeArm_FK_CTRL_rotateY";
-	rename -uid "1AC18AB2-4D6D-9D93-C032-AC9B907AB9FB";
+	rename -uid "6CCF5513-44E1-00CE-D125-2585F3CF6235";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1.1131941385122306e-014;
 createNode animCurveTA -n "LeftForeArm_FK_CTRL_rotateZ";
-	rename -uid "B30B2C02-4C9B-52E0-096A-88979E971A48";
+	rename -uid "4097FFD7-448B-2B5B-5543-1AABA0AC0293";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.3914926731402882e-014;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTU -n "LeftForeArm_FK_CTRL_AnimDataMult";
-	rename -uid "89C5FB8E-4671-76BA-6C8D-75BC9BAFEC25";
+	rename -uid "9A16FC7D-455F-91B0-4068-0E8E82EEC60F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTA -n "LeftHand_FK_CTRL_rotateX";
-	rename -uid "95F87796-4179-E546-9A17-CA8C84CAA0DC";
+	rename -uid "55EE448D-49A4-C1D9-8882-EAB7C2E7E2DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 3.1835053913730778e-014;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "LeftHand_FK_CTRL_rotateY";
-	rename -uid "B7789895-4CFA-A128-B74A-A98B240BC6DA";
+	rename -uid "BC11D402-41D4-E574-CB9C-2D8033E5D076";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -9.9392333795734934e-015;
+	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "LeftHand_FK_CTRL_rotateZ";
-	rename -uid "1E797A6F-4681-C7E0-2177-E1AE893CEE1D";
+	rename -uid "9172EC37-4250-CA15-E7AF-959769A32DBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1.2573130225160468e-014;
 createNode animCurveTU -n "LeftHand_FK_CTRL_AnimDataMult";
-	rename -uid "24DB9141-4621-7EB8-0460-A29C1794F090";
+	rename -uid "7EA7124F-4791-8D2B-10A6-DAADF40DCC80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTA -n "RightShoulder_CTRL_rotateX";
-	rename -uid "CD1B8182-408D-0FF6-4E7C-E4B3A4ACD74A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 -1.3201786736418491e-013 15 -22.163976096370387
-		 20 -22.163976096370387 30 0 42 0 49 0 75 0 96 0 114 -13.253777704207279 137 0;
-	setAttr -s 10 ".kit[2:9]"  1 18 18 1 18 18 18 18;
-	setAttr -s 10 ".kot[2:9]"  1 18 18 1 18 18 18 18;
-	setAttr -s 10 ".kix[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".kiy[2:9]"  0 0 0 0 0 0 0 0;
-	setAttr -s 10 ".kox[2:9]"  1 1 1 1 1 1 1 1;
-	setAttr -s 10 ".koy[2:9]"  0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "RightShoulder_CTRL_rotateY";
-	rename -uid "E7AF812D-41D1-9F61-53F3-C59AE604B809";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -4.7708320221952767e-015 15 7.1692396957588356
-		 20 7.1692396957588356 30 0 42 0 49 0 75 0 96 0 137 0;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 0 0 0 0 0 0;
-createNode animCurveTA -n "RightShoulder_CTRL_rotateZ";
-	rename -uid "E3D0E252-4E03-5306-BE74-B1895BBC6989";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -4.7708320221952767e-015 15 17.033229105192671
-		 20 17.033229105192671 30 0 42 -21.23402389941824 49 -21.23402389941824 75 0 96 0
-		 137 0;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 0.80822283029556274 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 -0.58887666463851929 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 0.80822294950485229 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 -0.58887666463851929 0 0 0 0 0;
-createNode animCurveTU -n "RightShoulder_CTRL_AnimDataMult";
-	rename -uid "DBA0C922-4C4F-59A8-DA82-119646FA55BA";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-	setAttr -s 9 ".kit[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kot[2:8]"  1 18 18 1 18 18 18;
-	setAttr -s 9 ".kix[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".kiy[2:8]"  0 0 0 0 0 0 0;
-	setAttr -s 9 ".kox[2:8]"  1 1 1 1 1 1 1;
-	setAttr -s 9 ".koy[2:8]"  0 0 0 0 0 0 0;
 createNode animCurveTA -n "RightArm_FK_CTRL_rotateX";
-	rename -uid "5E0CFB6A-47E3-FF17-8FC4-9F8EC2020419";
+	rename -uid "A8D520D0-4018-C9E9-56BC-0B94DE25B4E6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 -1.5356892074048825e-013;
 createNode animCurveTA -n "RightArm_FK_CTRL_rotateY";
-	rename -uid "6348C246-43EE-FE08-6F16-0592FE977AD4";
+	rename -uid "AAC5BEBC-449F-74AC-395B-E1B01DEBCAA0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 7.9513867036587919e-015;
 createNode animCurveTA -n "RightArm_FK_CTRL_rotateZ";
-	rename -uid "BDB9E8FE-4602-EA2F-7018-BFA59A86B776";
+	rename -uid "2C22CE7E-4A88-FFA6-8A33-D68173FE8305";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 -5.1062811487558808e-015;
 createNode animCurveTU -n "RightArm_FK_CTRL_AnimDataMult";
-	rename -uid "60621813-4AB5-14C7-2321-5C956705B530";
+	rename -uid "5165BB09-4B0D-421E-503E-96BC2DF6FC8E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTA -n "RightForeArm_FK_CTRL_rotateX";
-	rename -uid "41ADD55E-4B60-2995-9E5A-788B7057EF5B";
+	rename -uid "59BDB306-4132-40D4-1D0C-4196B205E7A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 7.4966667765433032e-014;
 createNode animCurveTA -n "RightForeArm_FK_CTRL_rotateY";
-	rename -uid "2244F08E-4066-F57D-B871-01958CB99434";
+	rename -uid "BDE45AD8-4DFC-30A1-3227-FF8B2E28DC7E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 -5.5659706925611559e-015;
 createNode animCurveTA -n "RightForeArm_FK_CTRL_rotateZ";
-	rename -uid "57E6EA8D-43DC-9563-E4DA-499D3DE208D3";
+	rename -uid "DC2955C1-462C-2973-4FB5-0393182F65CC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 7.1562480332929135e-015;
 createNode animCurveTU -n "RightForeArm_FK_CTRL_AnimDataMult";
-	rename -uid "F0069A4F-4664-AF25-A159-7EBE8F6BD2F9";
+	rename -uid "7AA1A713-49B8-4DEB-4309-5781568D2E05";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTA -n "RightHand_FK_CTRL_rotateX";
-	rename -uid "ED896E02-405F-1278-F715-8F989A52F170";
+	rename -uid "263CB60E-4F28-85A9-4521-80B26EE6688F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1.1473136630980481e-013;
 createNode animCurveTA -n "RightHand_FK_CTRL_rotateY";
-	rename -uid "718604CF-4DC1-0052-187A-F1B88A530122";
+	rename -uid "7C06EE84-4FB3-474E-82AC-23B2C6466764";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 4.9696166897867462e-017;
 createNode animCurveTA -n "RightHand_FK_CTRL_rotateZ";
-	rename -uid "FFFC5CAA-4CD0-D69D-3729-7C810C869E90";
+	rename -uid "7D13AB90-4C48-0E83-6173-D0B10CB79DE8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
 createNode animCurveTU -n "RightHand_FK_CTRL_AnimDataMult";
-	rename -uid "8FB52CD0-4417-68CB-801C-CC8F7B470514";
+	rename -uid "D71A66CB-41FA-CC67-EE71-D2B23607B243";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "LeftLeg_IK_CTRL_AnimDataMult";
-	rename -uid "77458CBE-4CB8-4001-10A9-39AB0A5CC88B";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTU -n "LeftLeg_IK_CTRL_FollowBody";
-	rename -uid "A7BC3786-4BE7-802D-BF93-1DB47F4EEA9A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftLeg_IK_CTRL_ParentToGlobal";
-	rename -uid "F8564CD7-46B9-ECA3-7015-26ADEA0A5A9C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftLeg_IK_CTRL_FollowFoot";
-	rename -uid "19CCC700-422B-C7D8-9EE0-749CE6B49161";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftLeg_IK_CTRL_GuideCurve1";
-	rename -uid "67543BD0-43F8-1A35-D811-9A8E5B766941";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateX";
-	rename -uid "5C20C49C-4F12-582E-C34F-0FB0B618F567";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 59.128580295465483 19 28.357313616112751
-		 34 94.584383605373475 65 55.116531033530563;
-createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateY";
-	rename -uid "5EF06993-4DEF-D86F-137A-8598A744BD0B";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1.5081635023355244 19 1.5081635023355244;
-createNode animCurveTA -n "LeftFoot_IK_CTRL_rotateZ";
-	rename -uid "285144FB-4432-AA63-9A47-68AE2CACEE41";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -0.4998702292904309 19 -0.4998702292904309;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_AnimDataMult";
-	rename -uid "9BD4F9B6-4B78-2DE8-E3AF-F1BB43454A0E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 19 1;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_FollowBody";
-	rename -uid "B383E236-4A9D-FD17-1D0E-3BA688F8A201";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ParentToGlobal";
-	rename -uid "5B5A704A-4B0D-B443-A4AB-83824B4FE185";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_FootRoll";
-	rename -uid "787F218F-4C9C-56BC-9069-8E87096A345E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeTap";
-	rename -uid "517EC55C-4A8E-F22B-3EDD-81A01D7E8C90";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeSideToSide";
-	rename -uid "77234E90-4098-4473-7BA8-6D8855A43939";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeRotate";
-	rename -uid "44D4AF87-4201-041E-7328-889380C4BC9C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ToeRoll";
-	rename -uid "598AAD76-4B42-D419-E780-EB90392288BE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_HipPivot";
-	rename -uid "41BAF291-4FC1-DB2E-4BD2-37BDD2AF4612";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_BallPivot";
-	rename -uid "27F9885F-4EDA-C193-58A7-508A933898F3";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_ToePivot";
-	rename -uid "C91499C9-4617-392B-E2E3-8193D3B1C8AD";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_HipSideToSide";
-	rename -uid "E22F4EBA-4C04-DA52-56A4-49B5568CAEC9";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "LeftFoot_IK_CTRL_HipBackToFront";
-	rename -uid "3BEF10AE-43AE-4235-0A56-A4A26C1E37B3";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightLeg_IK_CTRL_AnimDataMult";
-	rename -uid "D18B48E4-491D-E250-1718-09877CDF2A5C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTU -n "RightLeg_IK_CTRL_FollowBody";
-	rename -uid "1535C908-46D8-8148-19AB-C2879300453F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightLeg_IK_CTRL_ParentToGlobal";
-	rename -uid "9F97D52B-4F42-9FA9-6647-5C945B921A39";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightLeg_IK_CTRL_FollowFoot";
-	rename -uid "43F54F51-4A57-29B2-591C-7FAAB76AFEA4";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightLeg_IK_CTRL_GuideCurve1";
-	rename -uid "C1543C95-4F8A-90AC-481B-F09A40C0EC7C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTA -n "RightFoot_IK_CTRL_rotateX";
-	rename -uid "147F40A8-42A4-C2F0-B270-A2B6E412338C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 59.956145279158136 19 29.184878599805426
-		 34 95.411948589066199 65 55.944096017223345;
-createNode animCurveTA -n "RightFoot_IK_CTRL_rotateY";
-	rename -uid "12ACD7C4-41AC-0BAC-A462-1A9C5CF29606";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -7.8519943698630585e-015 19 0;
-createNode animCurveTA -n "RightFoot_IK_CTRL_rotateZ";
-	rename -uid "4C50B49D-4915-FAAA-66B3-3CA4366BF39B";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -6.1623246953355651e-015 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_AnimDataMult";
-	rename -uid "65FDBFAC-427A-BB2B-3A34-C99BC8A7323E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 19 1;
-createNode animCurveTU -n "RightFoot_IK_CTRL_FollowBody";
-	rename -uid "296CACF3-4BF2-3399-5DA1-33974E6EEFAE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ParentToGlobal";
-	rename -uid "DD357A61-4921-F332-550A-AA8167D8819A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_FootRoll";
-	rename -uid "B557DF7B-422D-9936-FB3E-9A8C344B50EE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ToeTap";
-	rename -uid "AE108733-430F-6DE0-BBE8-6EA640BC4561";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ToeSideToSide";
-	rename -uid "62D6C9F0-450F-3835-B8E6-529DAAF776A7";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ToeRotate";
-	rename -uid "BC26CC0E-4156-ECC3-65D5-FC86DF120B08";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ToeRoll";
-	rename -uid "556BE1B1-4776-A399-2B01-69BAF1620FB2";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_HipPivot";
-	rename -uid "4CF26D83-4089-72CB-BBEC-BB98C5FC8AD8";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_BallPivot";
-	rename -uid "209B0998-4A93-523E-5051-109270B13902";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_ToePivot";
-	rename -uid "7801336A-4FE4-41BA-1603-47B3C7070A8C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_HipSideToSide";
-	rename -uid "70CC591A-42EF-DDE6-BCE3-EBA06DB0AD73";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTU -n "RightFoot_IK_CTRL_HipBackToFront";
-	rename -uid "45316931-48F7-D25B-BD55-9E8D82B1E237";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 19 0;
-createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateX";
-	rename -uid "3CDB953C-4539-2F57-4738-0588AFD71FD4";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 13.270875986334898 15 7.8892801026499866
-		 20 7.8892801026499866 25 -9.5191593171330471 30 6.9492795741232003 42 13.496970824277927
-		 49 16.277325897973583 75 16.113571521863651 82 12.840497032119758 96 4.585146690374037
-		 113 3.8262834245304971 137 4.585146690374037;
-	setAttr -s 12 ".kit[10:11]"  18 9;
-	setAttr -s 12 ".kot[10:11]"  18 9;
-createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateY";
-	rename -uid "5F33A38F-4AAA-DDCF-C93A-E081086E0FFF";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 -0.1247990469632926 15 4.2478076492089389
-		 20 4.2478076492089389 25 -3.0100131936476893 30 6.7778026423213218 42 7.4371239774768334
-		 49 7.3890618681127211 75 7.3918847618495009 82 4.2136608314128381 96 -4.8819630283191007
-		 113 0.82963023227324251 137 -4.8819630283191007;
-	setAttr -s 12 ".kit[10:11]"  18 9;
-	setAttr -s 12 ".kot[10:11]"  18 9;
-createNode animCurveTL -n "LeftForeArm_IK_CTRL_translateZ";
-	rename -uid "F2117AC2-4509-5B93-B03B-42A3FF678F10";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 4.1947536668606746 15 -3.5191933214346176
-		 20 -3.5191933214346176 25 3.3656126588983275 30 14.813069612550894 42 3.68823671262464
-		 49 -0.27337660691897442 75 0.84301617519018424 82 1.4493029306577137 96 -2.7465825423340182
-		 113 -3.1909138356952274 137 -2.7465825423340182;
-	setAttr -s 12 ".kit[10:11]"  18 9;
-	setAttr -s 12 ".kot[10:11]"  18 9;
-createNode animCurveTL -n "LeftHand_IK_CTRL_translateX";
-	rename -uid "38760EDE-4023-53A8-639F-AF9A39674ABC";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 -2.7013375941490607 15 -9.8228120706572728
-		 20 -9.4936527266320212 25 -18.476641695800545 29 -18.823507317023473 34 -13.715917102858571
-		 49 -0.75607272117152113 59 -1.7921501792861392 75 -5.4188696999642563 93 -12.293506659234028
-		 119 -12.941925192459616 137 -12.954243718541607 161 -2.8330496844128827 174 -1.438816620748836;
-createNode animCurveTL -n "LeftHand_IK_CTRL_translateY";
-	rename -uid "78FB8089-40C1-70D9-F067-569DC54ED43C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 -12.168035616973267 15 -26.574073365829531
-		 20 -23.631768830924106 25 -23.9462015066688 29 -17.255814295673968 34 -10.205769279190143
-		 49 -1.3861899447103121 59 -5.8785273549314043 75 -7.5047897247746782 93 -19.164247302199318
-		 119 -22.118925609034296 137 -21.998424802145969 161 -12.218953429601038 174 -11.470448160921892;
-createNode animCurveTL -n "LeftHand_IK_CTRL_translateZ";
-	rename -uid "F41B792E-4C92-B167-58AF-978B35659E6A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 10.052578143329814 15 -1.7726233967413605
-		 20 0.96133754301522656 25 11.794563560888015 29 20.739642602071974 34 21.038266039051305
-		 49 2.1454311658974796 59 2.1876841631207218 75 5.6511919402281601 93 0.51086550676600506
-		 119 0.046633717753235063 137 0.047415555802834519 161 10.07910471127494 174 8.528069188369237;
-createNode animCurveTL -n "RightForeArm_IK_CTRL_translateX";
-	rename -uid "F5E4B60B-4133-C25C-1450-45ABE2A84149";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 -14.903767211279312 15 -31.213182135210836
-		 20 -35.775850821914425 25 -27.663044575982646 30 -10.571179578779063 42 12.916326818982158
-		 49 10.997145332444298 75 -13.293373271247264 82 -13.342424643595114 96 -13.204892108346987
-		 137 -13.204892108346987 165 -13.304990378954312;
-createNode animCurveTL -n "RightForeArm_IK_CTRL_translateY";
-	rename -uid "5903054A-4F5B-34D2-1508-F0A346D4C420";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 -2.9889310775425635 15 -8.3268598744968152
-		 20 -15.16055642282493 25 -9.9811023862298001 30 -1.9659955116119936 42 9.2706428609250029
-		 49 6.1117545654915819 75 6.415669232774829 82 6.4155078013743454 96 6.4171377744325984
-		 137 6.4171377744325984 165 -2.2951902515924232;
-createNode animCurveTL -n "RightForeArm_IK_CTRL_translateZ";
-	rename -uid "23E7C276-4020-2A27-5272-DAA51F9754DC";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 1.983457634650857 15 -11.165289716217004
-		 20 -7.153394481123712 25 -0.41469612809724854 30 -0.15567940488450407 42 7.3414957150300806
-		 49 2.9220847481913284 75 -2.6608288924867836 82 -2.0993626738039328 96 -4.5679669428432641
-		 137 -4.5679669428432641 165 0.83881683532066298;
-createNode animCurveTL -n "RightHand_IK_CTRL_translateX";
-	rename -uid "6E4AEA29-4D0D-5957-E732-7682EE8ADEE0";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -0.13035240189763694 15 -23.169748620874479
-		 20 -28.004257954232742 25 -14.616228256254066 30 20.096036452127731 33 18.60527406410424
-		 42 14.440857473680744 49 11.291043186972262 61 14.545390327013198 75 17.17171962452441
-		 82 17.271540138496459 96 17.032645246805316 114 16.591822150294465 137 17.032645246805316
-		 148 17.433064581796504 174 2.3255411064646809;
-createNode animCurveTL -n "RightHand_IK_CTRL_translateY";
-	rename -uid "D8931587-49A6-43C8-11A1-298008929263";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 -10.772076898303251 15 -4.3798367966734881
-		 20 -9.3567417543522033 25 -7.2738639284663247 30 -11.63820825392321 33 -25.974617243429496
-		 42 -33.39460269976351 49 -34.092566812086559 61 -28.888443748103395 75 -22.959168086438879
-		 82 -22.978096733912956 96 -22.927728253115944 114 -23.32084263042033 137 -22.927728253115944
-		 148 -20.085288038343592 174 -11.551558393133865;
-createNode animCurveTL -n "RightHand_IK_CTRL_translateZ";
-	rename -uid "7EC56F01-4AD7-E44B-AD6C-6F93261BB2CD";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 10.819797833686222 15 -0.22807725300720974
-		 20 -0.0032205466313304388 25 2.675005289550207 30 24.024379081899092 33 26.026858825904789
-		 42 13.24535475348063 49 6.4745195889852569 61 1.6572394793816705 75 4.9035943109236548
-		 82 6.7533042242455465 96 2.3264962283781085 114 1.9330636034269408 137 2.3264962283781085
-		 148 2.3526300559887634 174 12.11369694943517;
-createNode animCurveTU -n "LeftForeArm_IK_CTRL_AnimDataMult";
-	rename -uid "568C5C5A-42C5-8EA4-B3D7-B7A043E0A1F0";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTU -n "LeftForeArm_IK_CTRL_FollowBody";
-	rename -uid "80AB9EDA-41F2-4A8B-D241-658443A05539";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftForeArm_IK_CTRL_ParentToGlobal";
-	rename -uid "23533129-45A6-2833-B5EE-A8B308943A00";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftForeArm_IK_CTRL_FollowHand";
-	rename -uid "0A302B89-4683-E3C3-A741-2688AA1CB14E";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "LeftForeArm_IK_CTRL_GuideCurve1";
-	rename -uid "8BCBA7E2-4092-6989-C805-7EAFD640E92B";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTA -n "LeftHand_IK_CTRL_rotateX";
-	rename -uid "F606107A-469E-D0CA-4BF3-64B663D590D9";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 81.726187187541484 15 76.209900301099566
-		 20 76.054077058280768 25 87.765744103046984 34 56.434125918719936 49 30.372874702687074
-		 59 38.205525704775063 75 61.49936667009397 93 -56.404019149835101 119 -49.010004284907694
-		 137 -56.404019149835101 149 30.895167618398705 161 67.943976686515057;
-createNode animCurveTA -n "LeftHand_IK_CTRL_rotateY";
-	rename -uid "B7C2E11A-4E47-A097-5997-DB8CA2138BAD";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -25.023504226910891 15 -81.959901192813902
-		 20 -62.522164298269665 25 -58.111739900302801 34 -38.482459086669344 49 -43.64611096497574
-		 75 -43.64611096497574 93 -19.268469820281506 137 -19.268469820281506 149 -51.269258974662257
-		 161 -33.010378186106294;
-createNode animCurveTA -n "LeftHand_IK_CTRL_rotateZ";
-	rename -uid "61650A56-4B7F-1247-7D47-2593F547D656";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 9.464202501822502 15 74.548032966875084
-		 20 71.588564581770001 25 54.305005306617879 34 38.286382585815751 49 31.900381606158717
-		 75 31.900381606158717 93 120.68251167892915 137 120.68251167892915 149 104.41956885275376
-		 161 15.152853343303629;
-createNode animCurveTU -n "LeftHand_IK_CTRL_AnimDataMult";
-	rename -uid "DEDABCDF-41A4-B59D-81A1-17B42C057DFE";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 1 15 1 20 1 34 1 49 1 75 1 93 1 137 1;
-createNode animCurveTU -n "LeftHand_IK_CTRL_FollowBody";
-	rename -uid "45E3476A-46AC-6716-9B8E-11A6197D6FC4";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 15 0 20 0 34 0 49 0 75 0 93 0 137 0;
-createNode animCurveTU -n "LeftHand_IK_CTRL_ParentToGlobal";
-	rename -uid "7DA7E1B3-4BD3-8055-1269-0F9BE4F916A1";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 15 0 20 0 34 0 49 0 75 0 93 0 137 0;
-createNode animCurveTU -n "RightForeArm_IK_CTRL_AnimDataMult";
-	rename -uid "E9E10C04-49F6-E9A2-6545-D08FEE871F89";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTU -n "RightForeArm_IK_CTRL_FollowBody";
-	rename -uid "F8C9960C-49E4-38AE-8516-7791C187B8E6";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightForeArm_IK_CTRL_ParentToGlobal";
-	rename -uid "C0BE51C8-4DCF-8097-1A9E-4F8178C51349";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightForeArm_IK_CTRL_FollowHand";
-	rename -uid "A38797D8-4655-E3DE-48BE-6BA05AC3250A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0;
-createNode animCurveTU -n "RightForeArm_IK_CTRL_GuideCurve1";
-	rename -uid "DCF5AE15-4B54-65AA-271E-48B1A70C233F";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1;
-createNode animCurveTA -n "RightHand_IK_CTRL_rotateX";
-	rename -uid "AC3E777C-4EF9-2813-5ADE-A1BE600E53E2";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 81.873415615209538 15 35.656749316590371
-		 20 14.590401668318812 25 -20.494923122019333 30 78.505432371821769 33 110.49929520068851
-		 42 175.99875312668487 49 180.5463406955549 75 148.04878915087446 96 148.04878915087446
-		 114 150.64014323353618 137 148.04878915087446 148 173.22434942974635 164 374.15824994644203
-		 174 440.02878738916814;
-	setAttr -s 15 ".kit[13:14]"  18 9;
-	setAttr -s 15 ".kot[13:14]"  18 9;
-createNode animCurveTA -n "RightHand_IK_CTRL_rotateY";
-	rename -uid "3FED0789-4B64-282C-D1B9-FAAB845CE2D5";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 20.69512318577048 15 65.580656235825671
-		 20 65.580656235825671 25 73.491217894097545 30 65.580656235825671 33 46.247253345275958
-		 42 70.547400798484674 49 54.925738438722277 75 70.547400798484674 96 70.547400798484674
-		 137 70.547400798484674 148 81.495035564533097 164 60.786294183534885 174 35.768448738278828;
-	setAttr -s 14 ".kit[12:13]"  18 9;
-	setAttr -s 14 ".kot[12:13]"  18 9;
-createNode animCurveTA -n "RightHand_IK_CTRL_rotateZ";
-	rename -uid "282E31EE-4E86-CA25-02EE-27AF0461A2F5";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  1 -1.9669595059163396 15 10.846383109509413
-		 20 10.846383109509413 25 -23.642063037499241 30 10.846383109509413 33 -7.3916908422308252
-		 42 11.79570548930203 49 -15.748919605389268 75 11.79570548930203 96 11.79570548930203
-		 137 11.79570548930203 148 52.008490891469854 164 280.64147485511103 174 350.26212345817601;
-	setAttr -s 14 ".kit[12:13]"  18 9;
-	setAttr -s 14 ".kot[12:13]"  18 9;
-createNode animCurveTU -n "RightHand_IK_CTRL_AnimDataMult";
-	rename -uid "B7A4A3DF-4838-F038-E5AC-EF805D57A01C";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1 15 1 20 1 30 1 42 1 49 1 75 1 96 1 137 1
-		 148 1 174 1;
-createNode animCurveTU -n "RightHand_IK_CTRL_FollowBody";
-	rename -uid "A6E2FD7A-4CC6-E89F-937A-2788E3FE0F8A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0
-		 148 0 174 0;
-createNode animCurveTU -n "RightHand_IK_CTRL_ParentToGlobal";
-	rename -uid "819D2985-4C5C-C20F-B2F1-178C72890BC9";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 15 0 20 0 30 0 42 0 49 0 75 0 96 0 137 0
-		 148 0 174 0;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 115;
+	setAttr ".unw" 115;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -6403,7 +6922,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 	setAttr ".hwfr" 30;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "global_CTRL_translateX.o" "RigRN.phl[1]";
 connectAttr "global_CTRL_translateY.o" "RigRN.phl[2]";
 connectAttr "global_CTRL_translateZ.o" "RigRN.phl[3]";
@@ -7709,4 +8228,4 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo1.tgi[0].ni[0].dn"
 		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Wizard_GrabbingAnimation.ma
+// End of Wizard_MagicCharge.ma
