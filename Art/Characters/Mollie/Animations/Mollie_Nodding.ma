@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: Mollie_Nodding.ma
-//Last modified: Fri, Apr 06, 2018 09:49:14 AM
+//Last modified: Fri, Apr 06, 2018 11:59:39 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "Mollie_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents//VoodooEscape/Art/Characters/Mollie/Rig/Mollie_Rig.ma";
 file -r -ns ":" -dr 1 -rfn "Mollie_RigRN" -op "v=0;" -typ "mayaAscii" "C:/Users/kudza/Documents//VoodooEscape/Art/Characters/Mollie/Rig/Mollie_Rig.ma";
@@ -554,15 +554,15 @@ createNode transform -n "transform96";
 	setAttr ".r" -type "double3" 90.743814451955856 -11.429929166175349 160.09944232022312 ;
 	setAttr ".s" -type "double3" 30.47999999999999 30.48 30.479999999999997 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F05A947B-4E20-3385-BB1A-97BBD3D6FA95";
+	rename -uid "1611AF1B-4F45-4561-5C07-9C98BCC9EF17";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8A23EEA0-4443-3B76-937F-29BDA22ECC52";
+	rename -uid "2985DE69-4181-A702-4779-7A8F2A8082E5";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "91D62380-4927-BA70-4662-5AA546C8D8F5";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "4F7F1B2B-476F-EDC6-328A-A7820CF9E5CC";
+	rename -uid "FF4F0E07-4C52-82B6-17AB-3398EBBB4589";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F0BEEC18-4697-A2E1-FC83-8A8B60BD3AB2";
 	setAttr ".g" yes;
@@ -740,7 +740,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|RightHand_Options" "FK_IK" " -av -k 1 0"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
-		"translate" " -type \"double3\" -3.9602277721564946e-006 -0.80260211940899651 2.066330127817387e-008"
+		"translate" " -type \"double3\" -3.6027353984993752e-006 -0.77027375770403683 1.8798011448403712e-008"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL" 
 		"translateX" " -av"
@@ -781,7 +781,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
-		"rotate" " -type \"double3\" 53.89142885988722 -20.501966408998612 36.115445078728747"
+		"rotate" " -type \"double3\" 55.452815446039757 16.48667969678322 10.803128305731837"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotateX" " -av"
@@ -790,11 +790,11 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
-		"rotate" " -type \"double3\" 0 0 78.11923163101595"
+		"rotate" " -type \"double3\" 0 0 33.611966633607018"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
-		"rotate" " -type \"double3\" 0 0 44.507264997409102"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
 		"rotateX" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|LeftShoulder_CTRL_POS_GRP|LeftShoulder_CTRL_AnimData_CONST_GRP|LeftShoulder_CTRL_In_Rig_CONST_GRP|LeftShoulder_CTRL|LeftArm_FK_CTRL_POS_GRP|LeftArm_FK_CTRL_AnimData_CONST_GRP|LeftArm_FK_CTRL_In_Rig_CONST_GRP|LeftArm_FK_CTRL|LeftForeArm_FK_CTRL_POS_GRP|LeftForeArm_FK_CTRL_AnimData_CONST_GRP|LeftForeArm_FK_CTRL_In_Rig_CONST_GRP|LeftForeArm_FK_CTRL|LeftHand_FK_CTRL_POS_GRP|LeftHand_FK_CTRL_AnimData_CONST_GRP|LeftHand_FK_CTRL_In_Rig_CONST_GRP|LeftHand_FK_CTRL" 
@@ -808,7 +808,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL" 
-		"rotate" " -type \"double3\" 59.862438971778907 9.7034764816563168 -35.68415019190418"
+		"rotate" " -type \"double3\" 58.055000505063703 -22.308985395133423 -16.865159155678231"
 		
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL" 
 		"rotateX" " -av"
@@ -817,11 +817,11 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL|RightForeArm_FK_CTRL_POS_GRP|RightForeArm_FK_CTRL_AnimData_CONST_GRP|RightForeArm_FK_CTRL_In_Rig_CONST_GRP|RightForeArm_FK_CTRL" 
-		"rotate" " -type \"double3\" 0 0 -76.524754676330318"
+		"rotate" " -type \"double3\" 0 0 -39.575850719186633"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL|RightForeArm_FK_CTRL_POS_GRP|RightForeArm_FK_CTRL_AnimData_CONST_GRP|RightForeArm_FK_CTRL_In_Rig_CONST_GRP|RightForeArm_FK_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL|RightForeArm_FK_CTRL_POS_GRP|RightForeArm_FK_CTRL_AnimData_CONST_GRP|RightForeArm_FK_CTRL_In_Rig_CONST_GRP|RightForeArm_FK_CTRL|RightHand_FK_CTRL_POS_GRP|RightHand_FK_CTRL_AnimData_CONST_GRP|RightHand_FK_CTRL_In_Rig_CONST_GRP|RightHand_FK_CTRL" 
-		"rotate" " -type \"double3\" 0 0 -36.948903957143678"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Character|CTRL_GRP|global_CTRL|Root_CTRL_POS_GRP|Root_CTRL_AnimData_CONST_GRP|Root_CTRL_In_Rig_CONST_GRP|Root_CTRL|Spine_CTRL_POS_GRP|Spine_CTRL_AnimData_CONST_GRP|Spine_CTRL_In_Rig_CONST_GRP|Spine_CTRL|Spine1_CTRL_POS_GRP|Spine1_CTRL_AnimData_CONST_GRP|Spine1_CTRL_In_Rig_CONST_GRP|Spine1_CTRL|Spine2_CTRL_POS_GRP|Spine2_CTRL_AnimData_CONST_GRP|Spine2_CTRL_In_Rig_CONST_GRP|Spine2_CTRL|RightShoulder_CTRL_POS_GRP|RightShoulder_CTRL_AnimData_CONST_GRP|RightShoulder_CTRL_In_Rig_CONST_GRP|RightShoulder_CTRL|RightArm_FK_CTRL_POS_GRP|RightArm_FK_CTRL_AnimData_CONST_GRP|RightArm_FK_CTRL_In_Rig_CONST_GRP|RightArm_FK_CTRL|RightForeArm_FK_CTRL_POS_GRP|RightForeArm_FK_CTRL_AnimData_CONST_GRP|RightForeArm_FK_CTRL_In_Rig_CONST_GRP|RightForeArm_FK_CTRL|RightHand_FK_CTRL_POS_GRP|RightHand_FK_CTRL_AnimData_CONST_GRP|RightHand_FK_CTRL_In_Rig_CONST_GRP|RightHand_FK_CTRL" 
 		"rotateZ" " -av"
 		2 "|Character|CTRL_GRP|global_CTRL|LeftForeArm_IK_CTRL_parent_POS_GRP|LeftForeArm_IK_CTRL_parent_Global_POS_GRP|LeftForeArm_IK_CTRL_parent_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_POS_GRP|LeftForeArm_IK_CTRL_AnimData_CONST_GRP|LeftForeArm_IK_CTRL_In_Rig_CONST_GRP|LeftForeArm_IK_CTRL" 
@@ -934,7 +934,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_Neck" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm" 
-		"rotate" " -type \"double3\" 1.8794653430407133 -6.1314198011700318 68.82473369797934"
+		"rotate" " -type \"double3\" 5.6394892587129943 -3.0560677271583025 24.267579888089351"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm" 
 		"rotateX" " -av"
@@ -945,7 +945,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm|Bind_LeftHand" 
-		"rotate" " -type \"double3\" 0 0 44.507264997409102"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm|Bind_LeftHand" 
 		"rotateX" " -av"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm|Bind_LeftHand" 
@@ -955,7 +955,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_LeftShoulder|Bind_LeftArm|Bind_LeftForeArm|Bind_LeftHand" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm" 
-		"rotate" " -type \"double3\" 2.6188493733528087 6.2459091747103281 -59.012815996193595"
+		"rotate" " -type \"double3\" 5.8473003375401627 3.4193961048137869 -22.032135019498885"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm" 
 		"rotateX" " -av"
@@ -966,7 +966,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm|Bind_RightHand" 
-		"rotate" " -type \"double3\" 0 0 -36.948903957143678"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm|Bind_RightHand" 
 		"rotateX" " -av"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm|Bind_RightHand" 
@@ -976,7 +976,8 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_Spine|Bind_Spine1|Bind_Spine2|Bind_RightShoulder|Bind_RightArm|Bind_RightForeArm|Bind_RightHand" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg" "rotate" 
-		" -type \"double3\" 12.775883480682012 -5.1517654044477794 0.012148429969454224"
+		" -type \"double3\" 12.416993795424352 -5.1436840741490863 -0.0034102775358891644"
+		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg" "rotateX" 
 		" -av"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg" "rotateY" 
@@ -986,7 +987,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg" "segmentScaleCompensate" 
 		" 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg" 
-		"rotate" " -type \"double3\" -27.937904962323568 -0.8151135706778182 -0.18322651751938973"
+		"rotate" " -type \"double3\" -27.242166284152923 -0.82297009733494142 -0.18494222879187155"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg" 
 		"rotateX" " -av"
@@ -997,7 +998,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot" 
-		"rotate" " -type \"double3\" 13.948666476292628 -1.057268834024381 2.2055441146595158"
+		"rotate" " -type \"double3\" 13.613093085750183 -1.0519630142324994 2.208928565109574"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot" 
 		"rotateX" " -av"
@@ -1008,7 +1009,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot|Bind_LeftToeBase" 
-		"rotate" " -type \"double3\" -0.0018898943762780448 0.56232918591346381 -0.35111743826536751"
+		"rotate" " -type \"double3\" -0.001850094936059398 0.55702639133244425 -0.34780494094261816"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot|Bind_LeftToeBase" 
 		"rotateX" " -av"
@@ -1019,7 +1020,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_LeftUpLeg|Bind_LeftLeg|Bind_LeftFoot|Bind_LeftToeBase" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg" "rotate" 
-		" -type \"double3\" 9.917803072628141 1.810498996761579 -2.3136981366177616"
+		" -type \"double3\" 9.5157213190565102 1.8005507559867271 -2.2938600119399548"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg" "rotateX" 
 		" -av"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg" "rotateY" 
@@ -1029,7 +1030,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg" "segmentScaleCompensate" 
 		" 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg" 
-		"rotate" " -type \"double3\" -22.097158057119209 0.84116744472609051 0.23602771984697649"
+		"rotate" " -type \"double3\" -21.318295557388169 0.85005827517280641 0.23841215400975682"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg" 
 		"rotateX" " -av"
@@ -1040,7 +1041,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg|Bind_RightFoot" 
-		"rotate" " -type \"double3\" 12.180015852525365 0.32104791480559908 3.0349042961030843"
+		"rotate" " -type \"double3\" 11.805322618754658 0.33445151897656394 3.0309206846851646"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg|Bind_RightFoot" 
 		"rotateX" " -av"
@@ -1051,7 +1052,7 @@ createNode reference -n "Mollie_RigRN";
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg|Bind_RightFoot" 
 		"segmentScaleCompensate" " 0"
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg|Bind_RightFoot|Bind_RightToeBase" 
-		"rotate" " -type \"double3\" -0.011031294395068452 -1.4251994183852941 0.88141755899212937"
+		"rotate" " -type \"double3\" -0.010713950199168692 -1.4065966188012997 0.86990020026014458"
 		
 		2 "|Character|Joint_GRP|Bind_Joint_GRP|Bind_Hips|Bind_RightUpLeg|Bind_RightLeg|Bind_RightFoot|Bind_RightToeBase" 
 		"rotateX" " -av"
@@ -2510,8 +2511,8 @@ createNode animCurveTU -n "RightHand_IK_CTRL_ParentToGlobal";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
 select -ne :time1;
-	setAttr ".o" 12;
-	setAttr ".unw" 12;
+	setAttr ".o" 54;
+	setAttr ".unw" 54;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
